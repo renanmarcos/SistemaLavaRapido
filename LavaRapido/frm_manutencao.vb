@@ -21,6 +21,7 @@
     End Sub
 
     Private Sub dgv_dados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_dados.CellContentClick
+
         If dgv_dados.CurrentRow.Cells(3).Selected Then
 
             sql = "SELECT * FROM tb_login WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"

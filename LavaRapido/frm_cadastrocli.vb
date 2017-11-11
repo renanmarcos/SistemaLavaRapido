@@ -1,4 +1,4 @@
-﻿Public Class frm_cadastro
+﻿Public Class frm_cadastrocli
     Private Sub frm_cadastro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With cmb_perguntas.Items
             .Add("Qual é o segundo nome da mãe?")

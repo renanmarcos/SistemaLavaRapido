@@ -51,6 +51,9 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\exercicio_aula01\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -76,10 +79,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frm_cadastro.Designer.vb">
-      <DependentUpon>frm_cadastro.vb</DependentUpon>
+    <Compile Include="frm_cadastroadm.Designer.vb">
+      <DependentUpon>frm_cadastroadm.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_cadastro.vb">
+    <Compile Include="frm_cadastroadm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cadastrocli.Designer.vb">
+      <DependentUpon>frm_cadastrocli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cadastrocli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_fornecedor.Designer.vb">
+      <DependentUpon>frm_fornecedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_fornecedor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_login.vb">
@@ -95,10 +110,22 @@
     <Compile Include="frm_manutencao.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_menu.Designer.vb">
-      <DependentUpon>frm_menu.vb</DependentUpon>
+    <Compile Include="frm_menuadm.Designer.vb">
+      <DependentUpon>frm_menuadm.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_menu.vb">
+    <Compile Include="frm_menuadm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_menucliente.Designer.vb">
+      <DependentUpon>frm_menucliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_menucliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_menufunc.Designer.vb">
+      <DependentUpon>frm_menufunc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_menufunc.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_recuperar.Designer.vb">
@@ -125,8 +152,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frm_cadastro.resx">
-      <DependentUpon>frm_cadastro.vb</DependentUpon>
+    <EmbeddedResource Include="frm_cadastroadm.resx">
+      <DependentUpon>frm_cadastroadm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cadastrocli.resx">
+      <DependentUpon>frm_cadastrocli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_fornecedor.resx">
+      <DependentUpon>frm_fornecedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.vb</DependentUpon>
@@ -134,8 +167,14 @@
     <EmbeddedResource Include="frm_manutencao.resx">
       <DependentUpon>frm_manutencao.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_menu.resx">
-      <DependentUpon>frm_menu.vb</DependentUpon>
+    <EmbeddedResource Include="frm_menuadm.resx">
+      <DependentUpon>frm_menuadm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_menucliente.resx">
+      <DependentUpon>frm_menucliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_menufunc.resx">
+      <DependentUpon>frm_menufunc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_recuperar.resx">
       <DependentUpon>frm_recuperar.vb</DependentUpon>

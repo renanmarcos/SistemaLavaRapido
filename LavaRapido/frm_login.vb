@@ -37,7 +37,7 @@
                         tipo_conta = cmb_nivel.Text
 
                         If tipo_conta = rs.Fields(7).Value Then
-                            frm_menu.Show()
+                            frm_menufunc.Show()
                         Else
                             MsgBox("Você precisa acessar como " & rs.Fields(7).Value)
                         End If
