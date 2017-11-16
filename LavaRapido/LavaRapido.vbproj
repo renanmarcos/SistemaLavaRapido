@@ -110,28 +110,28 @@
     <Compile Include="frm_manutencao.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_menuadm.Designer.vb">
-      <DependentUpon>frm_menuadm.vb</DependentUpon>
+    <Compile Include="frm_menu.Designer.vb">
+      <DependentUpon>frm_menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_menuadm.vb">
+    <Compile Include="frm_menu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_menucliente.Designer.vb">
-      <DependentUpon>frm_menucliente.vb</DependentUpon>
+    <Compile Include="frm_menuinicial.Designer.vb">
+      <DependentUpon>frm_menuinicial.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_menucliente.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_menufunc.Designer.vb">
-      <DependentUpon>frm_menufunc.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_menufunc.vb">
+    <Compile Include="frm_menuinicial.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_recuperar.Designer.vb">
       <DependentUpon>frm_recuperar.vb</DependentUpon>
     </Compile>
     <Compile Include="frm_recuperar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_recuperaradm.Designer.vb">
+      <DependentUpon>frm_recuperaradm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_recuperaradm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="modulo_principal.vb" />
@@ -167,17 +167,17 @@
     <EmbeddedResource Include="frm_manutencao.resx">
       <DependentUpon>frm_manutencao.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_menuadm.resx">
-      <DependentUpon>frm_menuadm.vb</DependentUpon>
+    <EmbeddedResource Include="frm_menu.resx">
+      <DependentUpon>frm_menu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_menucliente.resx">
-      <DependentUpon>frm_menucliente.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_menufunc.resx">
-      <DependentUpon>frm_menufunc.vb</DependentUpon>
+    <EmbeddedResource Include="frm_menuinicial.resx">
+      <DependentUpon>frm_menuinicial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_recuperar.resx">
       <DependentUpon>frm_recuperar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_recuperaradm.resx">
+      <DependentUpon>frm_recuperaradm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -208,9 +208,9 @@
       <VersionMajor>2</VersionMajor>
       <VersionMinor>8</VersionMinor>
       <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
+      <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

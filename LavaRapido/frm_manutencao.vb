@@ -24,13 +24,13 @@
 
         If dgv_dados.CurrentRow.Cells(3).Selected Then
 
-            sql = "SELECT * FROM tb_login WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+            sql = "SELECT * FROM tb_adm WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
             rs = db.Execute(sql)
 
-            If rs.Fields(7).Value = "Administrador" Then
+            If rs.Fields("tipo_conta").Value = "Administrador" Then
                 MsgBox("Você não pode editar o Administrador.")
             Else
-                sql = "UPDATE tb_login SET status_conta='ativa', n_tentativas=3 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+                sql = "UPDATE tb_adm SET status_conta='ativa', n_tentativas=3 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_ativas.Checked = True
                 MsgBox("Usuário ativado com sucesso!")
@@ -38,13 +38,13 @@
 
         ElseIf dgv_dados.CurrentRow.Cells(4).Selected Then
 
-            sql = "SELECT * FROM tb_login WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+            sql = "SELECT * FROM tb_adm WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
             rs = db.Execute(sql)
 
-            If rs.Fields(7).Value = "Administrador" Then
+            If rs.Fields("tipo_conta").Value = "Administrador" Then
                 MsgBox("Você não pode editar o Administrador.")
             Else
-                sql = "UPDATE tb_login SET status_conta='bloqueada', n_tentativas=0 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+                sql = "UPDATE tb_adm SET status_conta='bloqueada', n_tentativas=0 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_bloqueadas.Checked = True
                 MsgBox("Usuário bloqueado com sucesso!")
@@ -52,10 +52,10 @@
 
         ElseIf dgv_dados.CurrentRow.Cells(5).Selected Then
 
-            sql = "SELECT * FROM tb_login WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+            sql = "SELECT * FROM tb_adm WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
             rs = db.Execute(sql)
 
-            If rs.Fields(7).Value = "Administrador" Then
+            If rs.Fields("tipo_conta").Value = "Administrador" Then
                 MsgBox("Você não pode editar o Administrador.")
             Else
                 sql = "DELETE FROM tb_login WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
@@ -86,11 +86,11 @@
             If situacao = "tudo" Then
                 With dgv_dados
                     .Rows.Clear()
-                    sql = "SELECT * FROM tb_login WHERE " & cmb_selecione.Text & " LIKE '" & txt_parametros.Text & "%' ORDER BY usuario"
+                    sql = "SELECT * FROM tb_adm WHERE " & cmb_selecione.Text & " LIKE '" & txt_parametros.Text & "%' ORDER BY usuario"
                     rs = db.Execute(sql)
                     cont = 1
                     Do While rs.EOF = False
-                        .Rows.Add(cont, rs.Fields(1).Value, rs.Fields(6).Value, Nothing, Nothing, Nothing)
+                        .Rows.Add(cont, rs.Fields("usuario").Value, rs.Fields("status_conta").Value, Nothing, Nothing, Nothing)
                         rs.MoveNext()
                         cont = cont + 1
                     Loop
@@ -98,11 +98,11 @@
             Else
                 With dgv_dados
                     .Rows.Clear()
-                    sql = "SELECT * FROM tb_login WHERE " & cmb_selecione.Text & " LIKE '" & txt_parametros.Text & "%' AND status_conta='" & situacao & "' ORDER BY usuario"
+                    sql = "SELECT * FROM tb_adm WHERE " & cmb_selecione.Text & " LIKE '" & txt_parametros.Text & "%' AND status_conta='" & situacao & "' ORDER BY usuario"
                     rs = db.Execute(sql)
                     cont = 1
                     Do While rs.EOF = False
-                        .Rows.Add(cont, rs.Fields(1).Value, rs.Fields(6).Value, Nothing, Nothing, Nothing)
+                        .Rows.Add(cont, rs.Fields("usuario").Value, rs.Fields("status_conta").Value, Nothing, Nothing, Nothing)
                         rs.MoveNext()
                         cont = cont + 1
                     Loop

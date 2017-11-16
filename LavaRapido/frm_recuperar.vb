@@ -1,7 +1,7 @@
 ﻿Public Class frm_recuperar
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Not (txt_usuario.Text = Nothing Or txt_resposta.Text = Nothing) Then
-            sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "' OR email='" & txt_usuario.Text & "'"
+            sql = "SELECT * FROM tb_cliente WHERE usuario='" & txt_usuario.Text & "' OR email='" & txt_usuario.Text & "'"
             rs = db.Execute(sql)
 
             If rs.EOF = False Then
@@ -37,5 +37,9 @@
         End With
 
         cmb_perguntas.SelectedIndex = 0
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        frm_recuperaradm.Show()
     End Sub
 End Class

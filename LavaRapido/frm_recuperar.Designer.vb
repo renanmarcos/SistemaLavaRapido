@@ -29,6 +29,7 @@ Partial Class frm_recuperar
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cmb_perguntas = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'txt_usuario
@@ -93,7 +94,7 @@ Partial Class frm_recuperar
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0979!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(256, 246)
+        Me.Button1.Location = New System.Drawing.Point(300, 260)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 50)
@@ -101,11 +102,22 @@ Partial Class frm_recuperar
         Me.Button1.Text = "Confirmar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(29, 231)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(306, 13)
+        Me.LinkLabel1.TabIndex = 31
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Clique aqui se você for Administrador tentando recuperar senha"
+        '
         'frm_recuperar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(701, 321)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cmb_perguntas)
         Me.Controls.Add(Me.txt_resposta)
@@ -132,4 +144,5 @@ Partial Class frm_recuperar
     Friend WithEvents Label3 As Label
     Friend WithEvents cmb_perguntas As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

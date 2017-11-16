@@ -17,11 +17,11 @@
         With frm_manutencao.dgv_dados
             Dim cont As Integer
             .Rows.Clear()
-            sql = "SELECT * FROM tb_login WHERE status_conta='ativa' ORDER BY usuario"
+            sql = "SELECT * FROM tb_adm WHERE status_conta='ativa' ORDER BY usuario"
             rs = db.Execute(sql)
             cont = 1
             Do While rs.EOF = False
-                .Rows.Add(cont, rs.Fields(1).Value, rs.Fields(6).Value, Nothing, Nothing, Nothing)
+                .Rows.Add(cont, rs.Fields("usuario").Value, rs.Fields("status_conta").Value, Nothing, Nothing, Nothing)
                 rs.MoveNext()
                 cont = cont + 1
             Loop
