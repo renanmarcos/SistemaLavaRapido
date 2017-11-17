@@ -31,6 +31,8 @@ Partial Class frm_fila
         Me.hora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.carro = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.placa = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cb_hoje = New System.Windows.Forms.CheckBox()
+        Me.dtp_selecionarDia = New System.Windows.Forms.DateTimePicker()
         CType(Me.dgv_fila, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,12 +43,11 @@ Partial Class frm_fila
         Me.dgv_fila.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_fila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_fila.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numero, Me.registro, Me.dia, Me.hora, Me.carro, Me.placa})
-        Me.dgv_fila.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgv_fila.Location = New System.Drawing.Point(0, 0)
+        Me.dgv_fila.Location = New System.Drawing.Point(-2, 90)
         Me.dgv_fila.Name = "dgv_fila"
         Me.dgv_fila.ReadOnly = True
         Me.dgv_fila.RowTemplate.Height = 28
-        Me.dgv_fila.Size = New System.Drawing.Size(1217, 645)
+        Me.dgv_fila.Size = New System.Drawing.Size(1217, 517)
         Me.dgv_fila.TabIndex = 0
         '
         'numero
@@ -91,16 +92,36 @@ Partial Class frm_fila
         Me.placa.Name = "placa"
         Me.placa.ReadOnly = True
         '
+        'cb_hoje
+        '
+        Me.cb_hoje.AutoSize = True
+        Me.cb_hoje.Location = New System.Drawing.Point(991, 40)
+        Me.cb_hoje.Name = "cb_hoje"
+        Me.cb_hoje.Size = New System.Drawing.Size(185, 24)
+        Me.cb_hoje.TabIndex = 1
+        Me.cb_hoje.Text = "Carros para lavar hoje"
+        Me.cb_hoje.UseVisualStyleBackColor = True
+        '
+        'dtp_selecionarDia
+        '
+        Me.dtp_selecionarDia.Location = New System.Drawing.Point(579, 40)
+        Me.dtp_selecionarDia.Name = "dtp_selecionarDia"
+        Me.dtp_selecionarDia.Size = New System.Drawing.Size(341, 26)
+        Me.dtp_selecionarDia.TabIndex = 2
+        '
         'frm_fila
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1217, 645)
+        Me.Controls.Add(Me.dtp_selecionarDia)
+        Me.Controls.Add(Me.cb_hoje)
         Me.Controls.Add(Me.dgv_fila)
         Me.Name = "frm_fila"
         Me.Text = "frm_fila"
         CType(Me.dgv_fila, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -111,4 +132,6 @@ Partial Class frm_fila
     Friend WithEvents hora As DataGridViewTextBoxColumn
     Friend WithEvents carro As DataGridViewTextBoxColumn
     Friend WithEvents placa As DataGridViewTextBoxColumn
+    Friend WithEvents cb_hoje As CheckBox
+    Friend WithEvents dtp_selecionarDia As DateTimePicker
 End Class
