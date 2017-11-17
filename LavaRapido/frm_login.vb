@@ -64,6 +64,7 @@
 
                     If tipo_conta = rs.Fields("tipo_conta").Value Then
                         tipo_conta = rs.Fields("tipo_conta").Value
+                        rg = rs.Fields("rg").Value
                         frm_menu.Show()
                     Else
                         MsgBox("Você precisa acessar como " & rs.Fields("tipo_conta").Value)

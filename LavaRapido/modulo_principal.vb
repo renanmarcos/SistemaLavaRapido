@@ -1,7 +1,7 @@
 ﻿Module modulo_principal
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public sql, tipo_conta, usuario As String
+    Public sql, tipo_conta, usuario, rg As String
     Public conexao = Application.StartupPath & "\banco\maindb.mdb"
 
     Sub conecta_banco()

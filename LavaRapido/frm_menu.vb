@@ -33,4 +33,16 @@
     Private Sub FornecedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FornecedoresToolStripMenuItem.Click
         frm_fornecedor.Show()
     End Sub
+
+    Private Sub EncerrarSessãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSessãoToolStripMenuItem.Click
+        Me.Close()
+    End Sub
+
+    Private Sub EncerrarSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncerrarSistemaToolStripMenuItem.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub AdministrarFilaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarFilaToolStripMenuItem.Click
+        frm_fila.Show()
+    End Sub
 End Class
