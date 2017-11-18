@@ -38,8 +38,7 @@
 
         cmb_perguntas.SelectedIndex = 0
     End Sub
-
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+    Private Sub LinkLabel1_Click(sender As Object, e As EventArgs) Handles LinkLabel1.Click
         frm_recuperaradm.Show()
     End Sub
 End Class

@@ -1,4 +1,5 @@
-﻿Public Class frm_cadastrocli
+﻿Imports MetroFramework
+Public Class frm_cadastrocli
     Private Sub frm_cadastro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With cmb_perguntas.Items
             .Add("Qual é o segundo nome da mãe?")
@@ -30,7 +31,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If txt_usuario.Text = Nothing Or txt_email.Text = Nothing Or txt_senha.Text = Nothing Or txt_repetir.Text = Nothing Or txt_resposta.Text = Nothing Then
-            MsgBox("Todos os campos precisam ser preenchidos.")
+            MetroMessageBox.Show(Me, "Todos os campos precisam ser preenchidos", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Else
             If StrComp(txt_senha.Text, txt_repetir.Text, vbBinaryCompare) = 0 Then
                 sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "'"
@@ -41,12 +42,12 @@
                       & txt_email.Text & "', '" & txt_senha.Text & "', '" & cmb_perguntas.Text & "', '" _
                       & txt_resposta.Text & "', 'ativa', '" & cmb_tipo.Text & "', 3)"
                     db.Execute(sql)
-                    MsgBox("Usuário cadastrado com sucesso!")
+                    MetroMessageBox.Show(Me, "Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
-                    MsgBox("Usuário já cadastrado no sistema.")
+                    MetroMessageBox.Show(Me, "Usuário já cadastrado no sistema.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
-                MsgBox("Senhas não coincidem")
+                MetroMessageBox.Show(Me, "Senhas não coincidem", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             End If
         End If
     End Sub

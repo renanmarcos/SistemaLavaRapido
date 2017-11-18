@@ -1,4 +1,5 @@
-﻿Public Class frm_login
+﻿Imports MetroFramework
+Public Class frm_login
     Dim n_tentativas As Integer
     Private Sub frm_login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conecta_banco()
@@ -11,14 +12,9 @@
         txt_usuario.Focus()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles link_esqueceu.LinkClicked
-        usuario = txt_usuario.Text
-        frm_recuperar.Show()
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click
         If txt_usuario.Text = Nothing Or txt_senha.Text = Nothing Then
-            MsgBox("Você precisa digitar o usuário e senha!")
+            MetroMessageBox.Show(Me, "Você precisa digitar o usuário e senha!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Else
             If cmb_nivel.SelectedIndex = 0 Then
                 verificarBanco("tb_cliente")
@@ -49,10 +45,10 @@
         rs = db.Execute(sql)
 
         If rs.EOF = True Then
-            MsgBox("Usuário/senha está incorreto ou o tipo de conta não é a esperada!")
+            MetroMessageBox.Show(Me, "Usuário/senha está incorreto ou o tipo de conta não é a esperada!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Else
             If n_tentativas <= 0 Then
-                MsgBox("Você está bloqueado. Contacte um administrador.")
+                MetroMessageBox.Show(Me, "Você está bloqueado. Contacte um administrador.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 btn_entrar.Enabled = False
             Else
                 Dim senhaExata = StrComp(txt_senha.Text, rs.Fields("senha").Value, vbBinaryCompare)
@@ -67,10 +63,10 @@
                         rg = rs.Fields("rg").Value
                         frm_menu.Show()
                     Else
-                        MsgBox("Você precisa acessar como " & rs.Fields("tipo_conta").Value)
+                        MetroMessageBox.Show(Me, "Você precisa acessar como " & rs.Fields("tipo_conta").Value, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End If
                 Else
-                    MsgBox("Usuário ou senha está incorreto!")
+                    MetroMessageBox.Show(Me, "Usuário ou senha está incorreto!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
                     If Not rs.Fields("tipo_conta").Value = "Administrador" Then
                         n_tentativas = n_tentativas - 1
@@ -105,5 +101,10 @@
             n_tentativas = 3
             btn_entrar.Enabled = True
         End If
+    End Sub
+
+    Private Sub link_esqueceu_Click(sender As Object, e As EventArgs) Handles link_esqueceu.Click
+        usuario = txt_usuario.Text
+        frm_recuperar.Show()
     End Sub
 End Class

@@ -1,4 +1,5 @@
 ﻿Public Class frm_fila
+    Dim resp As Integer
     Private Sub frm_fila_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conecta_banco()
         rg = "111111111"
@@ -35,10 +36,31 @@
             rs = db.Execute(sql)
             cont = 1
             Do While rs.EOF = False
-                .Rows.Add(cont, rs.Fields("rg").Value, rs.Fields("dia").Value, rs.Fields("hora").Value, rs.Fields("carro").Value, rs.Fields("placa").Value)
+                .Rows.Add(cont, rs.Fields("rg").Value, rs.Fields("dia").Value, rs.Fields("hora").Value,
+                          rs.Fields("carro").Value, rs.Fields("placa").Value, Nothing, 0, Nothing)
                 rs.MoveNext()
                 cont = cont + 1
             Loop
         End With
+    End Sub
+
+    Private Sub dgv_fila_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_fila.CellContentClick
+        With dgv_fila.CurrentRow
+            If .Cells("btn_concluido").Selected Then
+                resp = MsgBox("Tem certeza que deseja marcar como concluído?", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Marcar como concluído")
+
+                If resp = DialogResult.Yes Then
+                    MsgBox("pressionou o sim")
+                Else
+                    MsgBox("pressionou o nao")
+                End If
+            ElseIf .Cells("btn_pagar").Selected Then
+                MsgBox("Pagando...")
+            End If
+        End With
+    End Sub
+
+    Private Sub dtp_selecionarDia_KeyDown(sender As Object, e As KeyEventArgs) Handles dtp_selecionarDia.KeyDown
+        'e.SuppressKeyPress = True
     End Sub
 End Class

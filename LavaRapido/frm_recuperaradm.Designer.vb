@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frm_recuperaradm
-    Inherits System.Windows.Forms.Form
+    Inherits MetroFramework.Forms.MetroForm
 
     'Descartar substituições de formulário para limpar a lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -22,21 +22,19 @@ Partial Class frm_recuperaradm
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.txt_email = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button1 = New MetroFramework.Controls.MetroButton
+        Me.txt_email = New MetroFramework.Controls.MetroTextBox
+        Me.Label2 = New MetroFramework.Controls.MetroLabel
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0979!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(280, 172)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 50)
         Me.Button1.TabIndex = 38
         Me.Button1.Text = "Confirmar"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'txt_email
         '
@@ -49,7 +47,6 @@ Partial Class frm_recuperaradm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.08392!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(51, 85)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
@@ -66,13 +63,13 @@ Partial Class frm_recuperaradm
         Me.Controls.Add(Me.txt_email)
         Me.Controls.Add(Me.Label2)
         Me.Name = "frm_recuperaradm"
-        Me.Text = "frm_recuperaradm"
+        Me.Text = "Recuprar senha de Administrador"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents txt_email As TextBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Button1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents txt_email As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents Label2 As MetroFramework.Controls.MetroLabel
 End Class
