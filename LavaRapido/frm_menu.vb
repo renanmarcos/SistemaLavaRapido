@@ -45,4 +45,8 @@
     Private Sub AdministrarFilaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrarFilaToolStripMenuItem.Click
         frm_fila.Show()
     End Sub
+
+    Private Sub CaixaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CaixaToolStripMenuItem.Click
+        frm_caixa.Show()
+    End Sub
 End Class
