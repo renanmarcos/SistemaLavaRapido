@@ -50,56 +50,65 @@ Partial Class frm_fila
         'cb_hoje
         '
         Me.cb_hoje.AutoSize = True
-        Me.cb_hoje.Location = New System.Drawing.Point(403, 112)
+        Me.cb_hoje.Location = New System.Drawing.Point(461, 110)
         Me.cb_hoje.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_hoje.Name = "cb_hoje"
         Me.cb_hoje.Size = New System.Drawing.Size(137, 15)
+        Me.cb_hoje.Style = MetroFramework.MetroColorStyle.Teal
         Me.cb_hoje.TabIndex = 1
         Me.cb_hoje.Text = "Carros para lavar hoje"
         Me.cb_hoje.UseSelectable = True
+        Me.cb_hoje.UseStyleColors = True
         '
         'dtp_selecionarDia
         '
         Me.dtp_selecionarDia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_selecionarDia.Location = New System.Drawing.Point(112, 103)
+        Me.dtp_selecionarDia.Location = New System.Drawing.Point(170, 101)
         Me.dtp_selecionarDia.Margin = New System.Windows.Forms.Padding(2)
         Me.dtp_selecionarDia.MinimumSize = New System.Drawing.Size(0, 29)
         Me.dtp_selecionarDia.Name = "dtp_selecionarDia"
         Me.dtp_selecionarDia.Size = New System.Drawing.Size(262, 29)
+        Me.dtp_selecionarDia.Style = MetroFramework.MetroColorStyle.Teal
         Me.dtp_selecionarDia.TabIndex = 2
         '
         'rd_todos
         '
         Me.rd_todos.AutoSize = True
-        Me.rd_todos.Location = New System.Drawing.Point(573, 90)
+        Me.rd_todos.Location = New System.Drawing.Point(631, 88)
         Me.rd_todos.Name = "rd_todos"
         Me.rd_todos.Size = New System.Drawing.Size(55, 15)
+        Me.rd_todos.Style = MetroFramework.MetroColorStyle.Teal
         Me.rd_todos.TabIndex = 3
         Me.rd_todos.TabStop = True
         Me.rd_todos.Text = "Todos"
         Me.rd_todos.UseSelectable = True
+        Me.rd_todos.UseStyleColors = True
         '
         'rd_concluidos
         '
         Me.rd_concluidos.AutoSize = True
-        Me.rd_concluidos.Location = New System.Drawing.Point(573, 113)
+        Me.rd_concluidos.Location = New System.Drawing.Point(631, 111)
         Me.rd_concluidos.Name = "rd_concluidos"
         Me.rd_concluidos.Size = New System.Drawing.Size(83, 15)
+        Me.rd_concluidos.Style = MetroFramework.MetroColorStyle.Teal
         Me.rd_concluidos.TabIndex = 4
         Me.rd_concluidos.TabStop = True
         Me.rd_concluidos.Text = "Concluídos"
         Me.rd_concluidos.UseSelectable = True
+        Me.rd_concluidos.UseStyleColors = True
         '
         'rd_emfila
         '
         Me.rd_emfila.AutoSize = True
-        Me.rd_emfila.Location = New System.Drawing.Point(573, 136)
+        Me.rd_emfila.Location = New System.Drawing.Point(631, 134)
         Me.rd_emfila.Name = "rd_emfila"
         Me.rd_emfila.Size = New System.Drawing.Size(61, 15)
+        Me.rd_emfila.Style = MetroFramework.MetroColorStyle.Teal
         Me.rd_emfila.TabIndex = 5
         Me.rd_emfila.TabStop = True
         Me.rd_emfila.Text = "Em Fila"
         Me.rd_emfila.UseSelectable = True
+        Me.rd_emfila.UseStyleColors = True
         '
         'dgv_fila
         '
@@ -111,10 +120,10 @@ Partial Class frm_fila
         Me.dgv_fila.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgv_fila.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(173, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgv_fila.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
@@ -124,29 +133,31 @@ Partial Class frm_fila
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgv_fila.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgv_fila.EnableHeadersVisualStyles = False
         Me.dgv_fila.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgv_fila.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgv_fila.Location = New System.Drawing.Point(8, 201)
+        Me.dgv_fila.Location = New System.Drawing.Point(2, 201)
         Me.dgv_fila.Name = "dgv_fila"
         Me.dgv_fila.ReadOnly = True
         Me.dgv_fila.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(173, Byte), Integer))
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(206, Byte), Integer))
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgv_fila.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgv_fila.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgv_fila.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.dgv_fila.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_fila.Size = New System.Drawing.Size(953, 325)
+        Me.dgv_fila.Style = MetroFramework.MetroColorStyle.Teal
         Me.dgv_fila.TabIndex = 6
+        Me.dgv_fila.UseStyleColors = True
         '
         'Column1
         '
@@ -192,7 +203,7 @@ Partial Class frm_fila
         '
         'btn_concluido
         '
-        Me.btn_concluido.HeaderText = "Concluído"
+        Me.btn_concluido.HeaderText = "Concluir"
         Me.btn_concluido.Image = CType(resources.GetObject("btn_concluido.Image"), System.Drawing.Image)
         Me.btn_concluido.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
         Me.btn_concluido.Name = "btn_concluido"
@@ -227,6 +238,7 @@ Partial Class frm_fila
         Me.Controls.Add(Me.cb_hoje)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frm_fila"
+        Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Fila de carros"
         CType(Me.dgv_fila, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

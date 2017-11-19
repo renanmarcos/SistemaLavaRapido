@@ -1,4 +1,5 @@
-﻿Public Class frm_recuperar
+﻿Imports MetroFramework
+Public Class frm_recuperar
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Not (txt_usuario.Text = Nothing Or txt_resposta.Text = Nothing) Then
             sql = "SELECT * FROM tb_cliente WHERE usuario='" & txt_usuario.Text & "' OR email='" & txt_usuario.Text & "'"
@@ -10,18 +11,18 @@
 
                 If usuarioExato = 0 Or emailExato = 0 Then
                     If rs.Fields(4).Value = cmb_perguntas.Text And rs.Fields(5).Value = txt_resposta.Text Then
-                        MsgBox("Sua senha é: " & rs.Fields(3).Value)
+                        MetroMessageBox.Show(Me, "Sua senha é: " & rs.Fields(3).Value, "Senha recuperada!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Else
-                        MsgBox("Pergunta secreta ou resposta secreta não correspondem.")
+                        MetroMessageBox.Show(Me, "Pergunta secreta ou resposta secreta não correspondem.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
                 Else
-                    MsgBox("Pergunta secreta ou resposta secreta não correspondem.")
+                    MetroMessageBox.Show(Me, "Pergunta secreta ou resposta secreta não correspondem.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
-                MsgBox("Usuário ou E-mail não encontrados.")
+                MetroMessageBox.Show(Me, "Usuário ou E-mail não encontrados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
-            MsgBox("Usuário ou resposta secreta não podem estar vazios.")
+            MetroMessageBox.Show(Me, "Usuário ou resposta secreta não podem estar vazios.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 

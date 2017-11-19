@@ -1,4 +1,5 @@
-﻿Public Class frm_manutencao
+﻿Imports MetroFramework
+Public Class frm_manutencao
     Dim cont As Integer
     Private Sub frm_manutencao_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With cmb_selecione.Items
@@ -28,12 +29,12 @@
             rs = db.Execute(sql)
 
             If rs.Fields("tipo_conta").Value = "Administrador" Then
-                MsgBox("Você não pode editar o Administrador.")
+                MetroMessageBox.Show(Me, "Você não pode editar o Administrador.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 sql = "UPDATE tb_adm SET status_conta='ativa', n_tentativas=3 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_ativas.Checked = True
-                MsgBox("Usuário ativado com sucesso!")
+                MetroMessageBox.Show(Me, "Usuário ativado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
 
         ElseIf dgv_dados.CurrentRow.Cells(4).Selected Then
@@ -42,12 +43,12 @@
             rs = db.Execute(sql)
 
             If rs.Fields("tipo_conta").Value = "Administrador" Then
-                MsgBox("Você não pode editar o Administrador.")
+                MetroMessageBox.Show(Me, "Você não pode editar o Administrador.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 sql = "UPDATE tb_adm SET status_conta='bloqueada', n_tentativas=0 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_bloqueadas.Checked = True
-                MsgBox("Usuário bloqueado com sucesso!")
+                MetroMessageBox.Show(Me, "Usuário bloqueado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 
         ElseIf dgv_dados.CurrentRow.Cells(5).Selected Then
@@ -56,12 +57,12 @@
             rs = db.Execute(sql)
 
             If rs.Fields("tipo_conta").Value = "Administrador" Then
-                MsgBox("Você não pode editar o Administrador.")
+                MetroMessageBox.Show(Me, "Você não pode editar o Administrador.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 sql = "DELETE FROM tb_login WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_todas.Checked = True
-                MsgBox("Usuário excluído com sucesso!")
+                MetroMessageBox.Show(Me, "Usuário excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 
         End If
