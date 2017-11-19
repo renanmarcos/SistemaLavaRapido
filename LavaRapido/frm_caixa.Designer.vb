@@ -32,21 +32,19 @@ Partial Class frm_caixa
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New MetroFramework.Controls.MetroTabPage()
         Me.Button5 = New MetroFramework.Controls.MetroButton()
-        Me.Button4 = New MetroFramework.Controls.MetroButton()
-        Me.ComboBox2 = New MetroFramework.Controls.MetroComboBox()
-        Me.Label8 = New MetroFramework.Controls.MetroLabel()
-        Me.Button3 = New MetroFramework.Controls.MetroButton()
-        Me.ComboBox1 = New MetroFramework.Controls.MetroComboBox()
+        Me.btn_adicionar = New MetroFramework.Controls.MetroButton()
+        Me.cmb_servico = New MetroFramework.Controls.MetroComboBox()
         Me.Label9 = New MetroFramework.Controls.MetroLabel()
         Me.Label7 = New MetroFramework.Controls.MetroLabel()
         Me.Label6 = New MetroFramework.Controls.MetroLabel()
-        Me.Label5 = New MetroFramework.Controls.MetroLabel()
+        Me.lbl_total = New MetroFramework.Controls.MetroLabel()
         Me.Label4 = New MetroFramework.Controls.MetroLabel()
         Me.Label3 = New MetroFramework.Controls.MetroLabel()
         Me.Label1 = New MetroFramework.Controls.MetroLabel()
-        Me.DataGridView1 = New MetroFramework.Controls.MetroGrid()
+        Me.dgv_caixa = New MetroFramework.Controls.MetroGrid()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Button2 = New MetroFramework.Controls.MetroButton()
         Me.TabPage1 = New MetroFramework.Controls.MetroTabPage()
         Me.Button1 = New MetroFramework.Controls.MetroButton()
@@ -57,7 +55,7 @@ Partial Class frm_caixa
         Me.usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1 = New MetroFramework.Controls.MetroTabControl()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_caixa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -76,19 +74,16 @@ Partial Class frm_caixa
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.Button5)
-        Me.TabPage2.Controls.Add(Me.Button4)
-        Me.TabPage2.Controls.Add(Me.ComboBox2)
-        Me.TabPage2.Controls.Add(Me.Label8)
-        Me.TabPage2.Controls.Add(Me.Button3)
-        Me.TabPage2.Controls.Add(Me.ComboBox1)
+        Me.TabPage2.Controls.Add(Me.btn_adicionar)
+        Me.TabPage2.Controls.Add(Me.cmb_servico)
         Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.Label6)
-        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.lbl_total)
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Controls.Add(Me.Label1)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.dgv_caixa)
         Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.HorizontalScrollbarBarColor = True
         Me.TabPage2.HorizontalScrollbarHighlightOnWheel = False
@@ -113,57 +108,29 @@ Partial Class frm_caixa
         Me.Button5.Text = "Cancelar"
         Me.Button5.UseSelectable = True
         '
-        'Button4
+        'btn_adicionar
         '
-        Me.Button4.Location = New System.Drawing.Point(481, 147)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 14
-        Me.Button4.Text = "Excluir"
-        Me.Button4.UseSelectable = True
+        Me.btn_adicionar.Location = New System.Drawing.Point(520, 83)
+        Me.btn_adicionar.Name = "btn_adicionar"
+        Me.btn_adicionar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_adicionar.TabIndex = 11
+        Me.btn_adicionar.Text = "Adicionar"
+        Me.btn_adicionar.UseSelectable = True
         '
-        'ComboBox2
+        'cmb_servico
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.ItemHeight = 23
-        Me.ComboBox2.Location = New System.Drawing.Point(311, 149)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(154, 29)
-        Me.ComboBox2.TabIndex = 13
-        Me.ComboBox2.UseSelectable = True
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(307, 122)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(93, 19)
-        Me.Label8.TabIndex = 12
-        Me.Label8.Text = "Excluir Serviço"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(481, 75)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Adicionar"
-        Me.Button3.UseSelectable = True
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.ItemHeight = 23
-        Me.ComboBox1.Location = New System.Drawing.Point(311, 75)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(154, 29)
-        Me.ComboBox1.TabIndex = 10
-        Me.ComboBox1.UseSelectable = True
+        Me.cmb_servico.FormattingEnabled = True
+        Me.cmb_servico.ItemHeight = 23
+        Me.cmb_servico.Location = New System.Drawing.Point(350, 83)
+        Me.cmb_servico.Name = "cmb_servico"
+        Me.cmb_servico.Size = New System.Drawing.Size(154, 29)
+        Me.cmb_servico.TabIndex = 10
+        Me.cmb_servico.UseSelectable = True
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(307, 48)
+        Me.Label9.Location = New System.Drawing.Point(346, 56)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(112, 19)
         Me.Label9.TabIndex = 9
@@ -172,34 +139,34 @@ Partial Class frm_caixa
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(408, 369)
+        Me.Label7.Location = New System.Drawing.Point(447, 377)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 19)
+        Me.Label7.Size = New System.Drawing.Size(59, 19)
         Me.Label7.TabIndex = 7
-        Me.Label7.Text = "R$00,00"
+        Me.Label7.Text = "R$ 00,00"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(408, 344)
+        Me.Label6.Location = New System.Drawing.Point(447, 352)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(55, 19)
+        Me.Label6.Size = New System.Drawing.Size(59, 19)
         Me.Label6.TabIndex = 6
-        Me.Label6.Text = "R$00,00"
+        Me.Label6.Text = "R$ 00,00"
         '
-        'Label5
+        'lbl_total
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(408, 320)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 19)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "R$00,00"
+        Me.lbl_total.AutoSize = True
+        Me.lbl_total.Location = New System.Drawing.Point(447, 328)
+        Me.lbl_total.Name = "lbl_total"
+        Me.lbl_total.Size = New System.Drawing.Size(59, 19)
+        Me.lbl_total.TabIndex = 5
+        Me.lbl_total.Text = "R$ 00,00"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(299, 369)
+        Me.Label4.Location = New System.Drawing.Point(346, 377)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(74, 19)
         Me.Label4.TabIndex = 4
@@ -208,7 +175,7 @@ Partial Class frm_caixa
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(307, 344)
+        Me.Label3.Location = New System.Drawing.Point(358, 352)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 19)
         Me.Label3.TabIndex = 3
@@ -217,19 +184,21 @@ Partial Class frm_caixa
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(346, 320)
+        Me.Label1.Location = New System.Drawing.Point(385, 328)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 19)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Total:"
         '
-        'DataGridView1
+        'dgv_caixa
         '
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgv_caixa.AllowUserToAddRows = False
+        Me.dgv_caixa.AllowUserToDeleteRows = False
+        Me.dgv_caixa.AllowUserToResizeRows = False
+        Me.dgv_caixa.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgv_caixa.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgv_caixa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgv_caixa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -237,9 +206,8 @@ Partial Class frm_caixa
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4})
+        Me.dgv_caixa.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgv_caixa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column5})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -247,13 +215,13 @@ Partial Class frm_caixa
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.EnableHeadersVisualStyles = False
-        Me.DataGridView1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DataGridView1.Location = New System.Drawing.Point(18, 30)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgv_caixa.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgv_caixa.EnableHeadersVisualStyles = False
+        Me.dgv_caixa.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.dgv_caixa.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgv_caixa.Location = New System.Drawing.Point(6, 44)
+        Me.dgv_caixa.Name = "dgv_caixa"
+        Me.dgv_caixa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -261,21 +229,31 @@ Partial Class frm_caixa
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(243, 363)
-        Me.DataGridView1.TabIndex = 1
+        Me.dgv_caixa.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgv_caixa.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgv_caixa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgv_caixa.Size = New System.Drawing.Size(319, 363)
+        Me.dgv_caixa.TabIndex = 1
         '
         'Column3
         '
         Me.Column3.HeaderText = "Serviço"
         Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 140
         '
         'Column4
         '
         Me.Column4.HeaderText = "Preço"
         Me.Column4.Name = "Column4"
+        Me.Column4.Width = 60
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Excluir"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 60
         '
         'Button2
         '
@@ -312,7 +290,7 @@ Partial Class frm_caixa
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(98, 31)
         Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Criar Caixa"
+        Me.Button1.Text = "Iniciar Caixa"
         Me.Button1.UseSelectable = True
         '
         'txt_parametros
@@ -425,7 +403,7 @@ Partial Class frm_caixa
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Location = New System.Drawing.Point(1, 63)
         Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.SelectedIndex = 1
         Me.TabControl1.Size = New System.Drawing.Size(719, 472)
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.UseSelectable = True
@@ -440,7 +418,7 @@ Partial Class frm_caixa
         Me.Text = "Caixa"
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_caixa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).EndInit()
@@ -452,27 +430,21 @@ Partial Class frm_caixa
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_caixa.CellContentClick
     End Sub
 
     Friend WithEvents TabPage2 As MetroFramework.Controls.MetroTabPage
     Friend WithEvents Button5 As MetroFramework.Controls.MetroButton
-    Friend WithEvents Button4 As MetroFramework.Controls.MetroButton
-    Friend WithEvents ComboBox2 As MetroFramework.Controls.MetroComboBox
-    Friend WithEvents Label8 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents Button3 As MetroFramework.Controls.MetroButton
-    Friend WithEvents ComboBox1 As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents btn_adicionar As MetroFramework.Controls.MetroButton
+    Friend WithEvents cmb_servico As MetroFramework.Controls.MetroComboBox
     Friend WithEvents Label9 As MetroFramework.Controls.MetroLabel
     Friend WithEvents Label7 As MetroFramework.Controls.MetroLabel
     Friend WithEvents Label6 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents Label5 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lbl_total As MetroFramework.Controls.MetroLabel
     Friend WithEvents Label4 As MetroFramework.Controls.MetroLabel
     Friend WithEvents Label3 As MetroFramework.Controls.MetroLabel
     Friend WithEvents Label1 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents DataGridView1 As MetroFramework.Controls.MetroGrid
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents dgv_caixa As MetroFramework.Controls.MetroGrid
     Friend WithEvents Button2 As MetroFramework.Controls.MetroButton
     Friend WithEvents TabPage1 As MetroFramework.Controls.MetroTabPage
     Friend WithEvents Button1 As MetroFramework.Controls.MetroButton
@@ -482,4 +454,7 @@ Partial Class frm_caixa
     Friend WithEvents numero As DataGridViewTextBoxColumn
     Friend WithEvents usuario As DataGridViewTextBoxColumn
     Friend WithEvents TabControl1 As MetroFramework.Controls.MetroTabControl
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewImageColumn
 End Class
