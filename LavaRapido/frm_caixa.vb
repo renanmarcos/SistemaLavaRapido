@@ -1,65 +1,18 @@
 ﻿Public Class frm_caixa
     Dim contlista, rg As Integer
     Dim total As Double
-
+    Dim resp As String
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
 
     End Sub
 
     Private Sub frm_caixa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conecta_banco()
-        With cmb_servico.Items
-            .Add("Lavagem Básica")
-            .Add("Lavagem Completa")
-            .Add("Enceramento")
-            .Add("Polimento")
-        End With
-        contlista = 1
-    End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btn_adicionar.Click
-        If cmb_servico.SelectedItem = "Lavagem Básica" Then
-            dgv_caixa.Rows.Add(cmb_servico.SelectedItem, "R$20,00", Nothing, Nothing)
-            total = total + 20
-
-        ElseIf cmb_servico.SelectedItem = "Lavagem Completa" Then
-            dgv_caixa.Rows.Add(cmb_servico.SelectedItem, "R$40,00", Nothing, Nothing)
-            total = total + 40
-
-        ElseIf cmb_servico.SelectedItem = "Enceramento" Then
-            dgv_caixa.Rows.Add(cmb_servico.SelectedItem, "R$50,00", Nothing, Nothing)
-            total = total + 50
-
-        ElseIf cmb_servico.SelectedItem = "Polimento" Then
-            dgv_caixa.Rows.Add(cmb_servico.SelectedItem, "R$70,00", Nothing, Nothing)
-            total = total + 70
-
-        End If
-
-        contlista = contlista + 1
-        lbl_total.Text = total.ToString("c")
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
-    End Sub
-
-    Private Sub btn_excluir_Click(sender As Object, e As EventArgs)
-        If cmb_servico.SelectedItem = "Lavagem Básica" Then
-            total = total + 20
-
-        ElseIf cmb_servico.SelectedItem = "Lavagem Completa" Then
-            dgv_caixa.Rows.Add(cmb_servico.SelectedItem, "R$40,00", Nothing, Nothing)
-            total = total + 40
-
-        ElseIf cmb_servico.SelectedItem = "Enceramento" Then
-            dgv_caixa.Rows.Add(cmb_servico.SelectedItem, "R$50,00", Nothing, Nothing)
-            total = total + 50
-
-        ElseIf cmb_servico.SelectedItem = "Polimento" Then
-            dgv_caixa.Rows.Add(cmb_servico.SelectedItem, "R$70,00", Nothing, Nothing)
-            total = total + 70
-        End If
     End Sub
 
     Private Sub dgv_dados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_dados.CellContentClick
@@ -85,11 +38,15 @@
         End With
     End Sub
 
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_inciarcaixa.Click
         With dgv_caixa
             contlista = 1
             .Rows.Clear()
-            sql = "SELECT nome_servico, preco_servico FROM (tb_cliente INNER JOIN tb_fila ON tb_cliente.rg = tb_fila.rg) INNER JOIN tb_servicos ON tb_fila.id_servico = tb_servicos.id_servico WHERE tb_cliente.rg='111111111' "
+            sql = "SELECT * FROM (tb_cliente INNER JOIN tb_fila ON tb_cliente.rg = tb_fila.rg) INNER JOIN tb_servicos ON tb_fila.id_servico = tb_servicos.id_servico WHERE tb_cliente.rg='" & rg & "'"
             rs = db.Execute(sql)
             Do While rs.EOF = False
                 .Rows.Add(rs.Fields("nome_servico").Value, rs.Fields("preco_servico").Value, Nothing)
