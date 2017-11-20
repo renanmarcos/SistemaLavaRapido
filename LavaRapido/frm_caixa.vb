@@ -89,8 +89,8 @@
         With dgv_caixa
             contlista = 1
             .Rows.Clear()
-            rs = db.Execute(sql)
             sql = "SELECT nome_servico, preco_servico FROM (tb_cliente INNER JOIN tb_fila ON tb_cliente.rg = tb_fila.rg) INNER JOIN tb_servicos ON tb_fila.id_servico = tb_servicos.id_servico WHERE tb_cliente.rg='111111111' "
+            rs = db.Execute(sql)
             Do While rs.EOF = False
                 .Rows.Add(rs.Fields("nome_servico").Value, rs.Fields("preco_servico").Value, Nothing)
                 rs.MoveNext()
