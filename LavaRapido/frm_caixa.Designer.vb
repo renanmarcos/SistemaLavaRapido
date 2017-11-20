@@ -47,7 +47,7 @@ Partial Class frm_caixa
         Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Button2 = New MetroFramework.Controls.MetroButton()
         Me.TabPage1 = New MetroFramework.Controls.MetroTabPage()
-        Me.Button1 = New MetroFramework.Controls.MetroButton()
+        Me.btn_inciarcaixa = New MetroFramework.Controls.MetroButton()
         Me.txt_parametros = New MetroFramework.Controls.MetroTextBox()
         Me.Label2 = New MetroFramework.Controls.MetroLabel()
         Me.dgv_dados = New MetroFramework.Controls.MetroGrid()
@@ -266,7 +266,7 @@ Partial Class frm_caixa
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.btn_inciarcaixa)
         Me.TabPage1.Controls.Add(Me.txt_parametros)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.dgv_dados)
@@ -284,14 +284,14 @@ Partial Class frm_caixa
         Me.TabPage1.VerticalScrollbarHighlightOnWheel = False
         Me.TabPage1.VerticalScrollbarSize = 10
         '
-        'Button1
+        'btn_inciarcaixa
         '
-        Me.Button1.Location = New System.Drawing.Point(491, 376)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 31)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Iniciar Caixa"
-        Me.Button1.UseSelectable = True
+        Me.btn_inciarcaixa.Location = New System.Drawing.Point(491, 376)
+        Me.btn_inciarcaixa.Name = "btn_inciarcaixa"
+        Me.btn_inciarcaixa.Size = New System.Drawing.Size(98, 31)
+        Me.btn_inciarcaixa.TabIndex = 23
+        Me.btn_inciarcaixa.Text = "Iniciar Caixa"
+        Me.btn_inciarcaixa.UseSelectable = True
         '
         'txt_parametros
         '
@@ -403,7 +403,7 @@ Partial Class frm_caixa
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Location = New System.Drawing.Point(1, 63)
         Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 1
+        Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(719, 472)
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.UseSelectable = True
@@ -447,7 +447,7 @@ Partial Class frm_caixa
     Friend WithEvents dgv_caixa As MetroFramework.Controls.MetroGrid
     Friend WithEvents Button2 As MetroFramework.Controls.MetroButton
     Friend WithEvents TabPage1 As MetroFramework.Controls.MetroTabPage
-    Friend WithEvents Button1 As MetroFramework.Controls.MetroButton
+    Friend WithEvents btn_inciarcaixa As MetroFramework.Controls.MetroButton
     Friend WithEvents txt_parametros As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Label2 As MetroFramework.Controls.MetroLabel
     Friend WithEvents dgv_dados As MetroFramework.Controls.MetroGrid
