@@ -8,8 +8,17 @@
             .Add("data_compra")
         End With
         cmb_selecao.SelectedIndex() = 0
-
         conecta_banco()
+        With dgv_fornecedor
+            .Rows.Clear()
+            sql = "select * from tb_fornecedores"
+            rs = db.Execute(sql)
+            Do While rs.EOF = False
+                .Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+                rg = rs.Fields(0).Value
+                rs.MoveNext()
+            Loop
+        End With
     End Sub
 
     Private Sub txt_parametros_Click(sender As Object, e As EventArgs) Handles txt_parametros.Click
@@ -28,5 +37,10 @@
                 contlista = contlista + 1
             Loop
         End With
+    End Sub
+
+    Private Sub btn_Adicionar_Click(sender As Object, e As EventArgs) Handles btn_Adicionar.Click
+        Me.Hide()
+        frm_fornecadastro.Show()
     End Sub
 End Class
