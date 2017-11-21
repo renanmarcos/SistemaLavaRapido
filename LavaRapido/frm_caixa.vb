@@ -42,6 +42,10 @@
 
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_inciarcaixa.Click
         With dgv_caixa
             contlista = 1
@@ -54,5 +58,6 @@
                 contlista = contlista + 1
             Loop
         End With
+        MsgBox("Caixa criado com sucesso")
     End Sub
 End Class
