@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.LavaRapido.frm_fornecedor
+            Me.MainForm = Global.LavaRapido.frm_recuperaradm
         End Sub
     End Class
 End Namespace

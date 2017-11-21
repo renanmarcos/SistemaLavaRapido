@@ -150,9 +150,9 @@ Partial Class frm_recuperar
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Location = New System.Drawing.Point(22, 257)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(370, 23)
+        Me.LinkLabel1.Size = New System.Drawing.Size(433, 23)
         Me.LinkLabel1.TabIndex = 31
-        Me.LinkLabel1.Text = "Clique aqui se você for Administrador tentando recuperar senha"
+        Me.LinkLabel1.Text = "Clique aqui se você for Administrador/Funcionário tentando recuperar senha"
         Me.LinkLabel1.UseSelectable = True
         '
         'frm_recuperar
