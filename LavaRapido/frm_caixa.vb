@@ -1,22 +1,31 @@
 ﻿Public Class frm_caixa
-    Dim contlista, rg As Integer
-    Dim total As Double
+    Dim contlista, cont, rg As Integer
+    Dim total, desconto As Double
     Dim resp As String
+
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
 
     End Sub
 
     Private Sub frm_caixa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conecta_banco()
-
+        With dgv_dados
+            .Rows.Clear()
+            sql = "select * from tb_cliente"
+            rs = db.Execute(sql)
+            Do While rs.EOF = False
+                .Rows.Add(rs.Fields(0).Value, rs.Fields(2).Value, Nothing, Nothing)
+                rs.MoveNext()
+            Loop
+        End With
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles lbl_precofinal.Click
 
     End Sub
 
     Private Sub dgv_dados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_dados.CellContentClick
-
+        rg = dgv_dados.CurrentRow.Cells(0).Value.ToString
     End Sub
 
     Private Sub txt_parametros_Click(sender As Object, e As EventArgs) Handles txt_parametros.Click
@@ -31,11 +40,11 @@
             rs = db.Execute(sql)
             Do While rs.EOF = False
                 .Rows.Add(rs.Fields(0).Value, rs.Fields(2).Value, Nothing, Nothing)
-                rg = rs.Fields(0).Value
                 rs.MoveNext()
                 contlista = contlista + 1
             Loop
         End With
+
     End Sub
 
     Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
@@ -46,7 +55,12 @@
 
     End Sub
 
+    Private Sub DataGridView1_CellContentChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_caixa.CellValueChanged
+
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_inciarcaixa.Click
+        total = 0
         With dgv_caixa
             contlista = 1
             .Rows.Clear()
@@ -58,6 +72,18 @@
                 contlista = contlista + 1
             Loop
         End With
+        For Each col As DataGridViewRow In dgv_caixa.Rows
+            total = total + col.Cells(1).Value
+            lbl_total.Text = total.ToString("c")
+        Next
         MsgBox("Caixa criado com sucesso")
+        sql = "SELECT * from tb_cliente where rg ='" & rg & "'"
+        rs = db.Execute(sql)
+        If String.Compare(rs.Fields("bonus").ToString, "desconto") Then
+            desconto = Convert.ToInt16(rs.Fields("qtd_idas").Value) * 0.42
+            lbl_desconto.Text = desconto.ToString("c")
+        End If
+        lbl_precofinal.Text = (total - desconto).ToString("c")
+
     End Sub
 End Class

@@ -131,7 +131,7 @@ Partial Class frm_fornecadastro
         Me.btn_Criar.Name = "btn_Criar"
         Me.btn_Criar.Size = New System.Drawing.Size(133, 50)
         Me.btn_Criar.TabIndex = 29
-        Me.btn_Criar.Text = "Criar"
+        Me.btn_Criar.Text = "Gravar"
         Me.btn_Criar.UseSelectable = True
         '
         'txt_nomep
@@ -264,7 +264,7 @@ Partial Class frm_fornecadastro
         Me.ClientSize = New System.Drawing.Size(790, 361)
         Me.Controls.Add(Me.GroupBox2)
         Me.Name = "frm_fornecadastro"
-        Me.Text = "Cadastro de Fornecedor"
+        Me.Text = "Fornecedor"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)

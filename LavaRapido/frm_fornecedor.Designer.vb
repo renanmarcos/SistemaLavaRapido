@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_fornecedor
     Inherits MetroFramework.Forms.MetroForm
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,26 +20,45 @@ Partial Class frm_fornecedor
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.txt_parametros = New MetroFramework.Controls.MetroTextBox()
-        Me.lbl_parametro = New MetroFramework.Controls.MetroLabel()
-        Me.dgv_fornecedor = New MetroFramework.Controls.MetroGrid()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.btn_Adicionar = New MetroFramework.Controls.MetroButton()
+        Me.lbl_parametro = New MetroFramework.Controls.MetroLabel()
+        Me.txt_parametros = New MetroFramework.Controls.MetroTextBox()
+        Me.Column8 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgv_fornecedor = New MetroFramework.Controls.MetroGrid()
         Me.cmb_selecao = New MetroFramework.Controls.MetroComboBox()
         CType(Me.dgv_fornecedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'btn_Adicionar
+        '
+        Me.btn_Adicionar.Location = New System.Drawing.Point(454, 98)
+        Me.btn_Adicionar.Name = "btn_Adicionar"
+        Me.btn_Adicionar.Size = New System.Drawing.Size(153, 23)
+        Me.btn_Adicionar.TabIndex = 27
+        Me.btn_Adicionar.Text = "Adicionar novo Registro"
+        Me.btn_Adicionar.UseSelectable = True
+        '
+        'lbl_parametro
+        '
+        Me.lbl_parametro.AutoSize = True
+        Me.lbl_parametro.Location = New System.Drawing.Point(27, 66)
+        Me.lbl_parametro.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_parametro.Name = "lbl_parametro"
+        Me.lbl_parametro.Size = New System.Drawing.Size(181, 19)
+        Me.lbl_parametro.TabIndex = 21
+        Me.lbl_parametro.Text = "Digite o parâmetro de busca:"
         '
         'txt_parametros
         '
@@ -72,15 +91,61 @@ Partial Class frm_fornecedor
         Me.txt_parametros.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txt_parametros.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'lbl_parametro
+        'Column8
         '
-        Me.lbl_parametro.AutoSize = True
-        Me.lbl_parametro.Location = New System.Drawing.Point(27, 66)
-        Me.lbl_parametro.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lbl_parametro.Name = "lbl_parametro"
-        Me.lbl_parametro.Size = New System.Drawing.Size(181, 19)
-        Me.lbl_parametro.TabIndex = 21
-        Me.lbl_parametro.Text = "Digite o parâmetro de busca:"
+        Me.Column8.HeaderText = "Excluir"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 80
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Editar"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 80
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Data"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 80
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Preço"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 80
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Quantidade"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 80
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Nome"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 80
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Fornecedor"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 80
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 50
         '
         'dgv_fornecedor
         '
@@ -113,6 +178,7 @@ Partial Class frm_fornecedor
         Me.dgv_fornecedor.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgv_fornecedor.Location = New System.Drawing.Point(27, 134)
         Me.dgv_fornecedor.Name = "dgv_fornecedor"
+        Me.dgv_fornecedor.ReadOnly = True
         Me.dgv_fornecedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
@@ -126,63 +192,6 @@ Partial Class frm_fornecedor
         Me.dgv_fornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgv_fornecedor.Size = New System.Drawing.Size(707, 358)
         Me.dgv_fornecedor.TabIndex = 26
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 50
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Fornecedor"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 80
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Nome"
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 80
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Quantidade"
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 80
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Preço"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 80
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Data"
-        Me.Column6.Name = "Column6"
-        Me.Column6.Width = 80
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Editar"
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 80
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Excluir"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 80
-        '
-        'btn_Adicionar
-        '
-        Me.btn_Adicionar.Location = New System.Drawing.Point(454, 98)
-        Me.btn_Adicionar.Name = "btn_Adicionar"
-        Me.btn_Adicionar.Size = New System.Drawing.Size(153, 23)
-        Me.btn_Adicionar.TabIndex = 27
-        Me.btn_Adicionar.Text = "Adicionar novo Registro"
-        Me.btn_Adicionar.UseSelectable = True
         '
         'cmb_selecao
         '
@@ -214,17 +223,17 @@ Partial Class frm_fornecedor
 
     End Sub
 
-    Friend WithEvents txt_parametros As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents lbl_parametro As MetroFramework.Controls.MetroLabel
-    Friend WithEvents dgv_fornecedor As MetroFramework.Controls.MetroGrid
     Friend WithEvents btn_Adicionar As MetroFramework.Controls.MetroButton
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewImageColumn
+    Friend WithEvents lbl_parametro As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txt_parametros As MetroFramework.Controls.MetroTextBox
     Friend WithEvents Column8 As DataGridViewImageColumn
+    Friend WithEvents Column7 As DataGridViewImageColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents dgv_fornecedor As MetroFramework.Controls.MetroGrid
     Friend WithEvents cmb_selecao As MetroFramework.Controls.MetroComboBox
 End Class

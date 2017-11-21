@@ -31,9 +31,8 @@ Partial Class frm_caixa
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New MetroFramework.Controls.MetroTabPage()
-        Me.Button5 = New MetroFramework.Controls.MetroButton()
-        Me.Label7 = New MetroFramework.Controls.MetroLabel()
-        Me.Label6 = New MetroFramework.Controls.MetroLabel()
+        Me.lbl_precofinal = New MetroFramework.Controls.MetroLabel()
+        Me.lbl_desconto = New MetroFramework.Controls.MetroLabel()
         Me.lbl_total = New MetroFramework.Controls.MetroLabel()
         Me.Label4 = New MetroFramework.Controls.MetroLabel()
         Me.Label3 = New MetroFramework.Controls.MetroLabel()
@@ -69,9 +68,8 @@ Partial Class frm_caixa
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Button5)
-        Me.TabPage2.Controls.Add(Me.Label7)
-        Me.TabPage2.Controls.Add(Me.Label6)
+        Me.TabPage2.Controls.Add(Me.lbl_precofinal)
+        Me.TabPage2.Controls.Add(Me.lbl_desconto)
         Me.TabPage2.Controls.Add(Me.lbl_total)
         Me.TabPage2.Controls.Add(Me.Label4)
         Me.TabPage2.Controls.Add(Me.Label3)
@@ -92,46 +90,37 @@ Partial Class frm_caixa
         Me.TabPage2.VerticalScrollbarHighlightOnWheel = False
         Me.TabPage2.VerticalScrollbarSize = 10
         '
-        'Button5
+        'lbl_precofinal
         '
-        Me.Button5.Location = New System.Drawing.Point(598, 355)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(101, 23)
-        Me.Button5.TabIndex = 15
-        Me.Button5.Text = "Cancelar"
-        Me.Button5.UseSelectable = True
+        Me.lbl_precofinal.AutoSize = True
+        Me.lbl_precofinal.Location = New System.Drawing.Point(447, 377)
+        Me.lbl_precofinal.Name = "lbl_precofinal"
+        Me.lbl_precofinal.Size = New System.Drawing.Size(52, 19)
+        Me.lbl_precofinal.TabIndex = 7
+        Me.lbl_precofinal.Text = "R$ 0,00"
         '
-        'Label7
+        'lbl_desconto
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(447, 377)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(59, 19)
-        Me.Label7.TabIndex = 7
-        Me.Label7.Text = "R$ 00,00"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(447, 352)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 19)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "R$ 00,00"
+        Me.lbl_desconto.AutoSize = True
+        Me.lbl_desconto.Location = New System.Drawing.Point(447, 352)
+        Me.lbl_desconto.Name = "lbl_desconto"
+        Me.lbl_desconto.Size = New System.Drawing.Size(52, 19)
+        Me.lbl_desconto.TabIndex = 6
+        Me.lbl_desconto.Text = "R$ 0,00"
         '
         'lbl_total
         '
         Me.lbl_total.AutoSize = True
         Me.lbl_total.Location = New System.Drawing.Point(447, 328)
         Me.lbl_total.Name = "lbl_total"
-        Me.lbl_total.Size = New System.Drawing.Size(59, 19)
+        Me.lbl_total.Size = New System.Drawing.Size(52, 19)
         Me.lbl_total.TabIndex = 5
-        Me.lbl_total.Text = "R$ 00,00"
+        Me.lbl_total.Text = "R$ 0,00"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(346, 377)
+        Me.Label4.Location = New System.Drawing.Point(356, 377)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(74, 19)
         Me.Label4.TabIndex = 4
@@ -140,7 +129,7 @@ Partial Class frm_caixa
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(358, 352)
+        Me.Label3.Location = New System.Drawing.Point(368, 352)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 19)
         Me.Label3.TabIndex = 3
@@ -149,7 +138,7 @@ Partial Class frm_caixa
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(385, 328)
+        Me.Label1.Location = New System.Drawing.Point(395, 328)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 19)
         Me.Label1.TabIndex = 2
@@ -215,9 +204,9 @@ Partial Class frm_caixa
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(598, 384)
+        Me.Button2.Location = New System.Drawing.Point(560, 377)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(101, 23)
+        Me.Button2.Size = New System.Drawing.Size(125, 30)
         Me.Button2.TabIndex = 0
         Me.Button2.Text = "Finalizar "
         Me.Button2.UseSelectable = True
@@ -392,9 +381,8 @@ Partial Class frm_caixa
     End Sub
 
     Friend WithEvents TabPage2 As MetroFramework.Controls.MetroTabPage
-    Friend WithEvents Button5 As MetroFramework.Controls.MetroButton
-    Friend WithEvents Label7 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents Label6 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lbl_precofinal As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lbl_desconto As MetroFramework.Controls.MetroLabel
     Friend WithEvents lbl_total As MetroFramework.Controls.MetroLabel
     Friend WithEvents Label4 As MetroFramework.Controls.MetroLabel
     Friend WithEvents Label3 As MetroFramework.Controls.MetroLabel
