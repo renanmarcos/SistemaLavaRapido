@@ -22,35 +22,59 @@ Partial Class frm_recuperaradm
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New MetroFramework.Controls.MetroButton
-        Me.txt_email = New MetroFramework.Controls.MetroTextBox
-        Me.Label2 = New MetroFramework.Controls.MetroLabel
+        Me.Button1 = New MetroFramework.Controls.MetroButton()
+        Me.txt_email = New MetroFramework.Controls.MetroTextBox()
+        Me.Label2 = New MetroFramework.Controls.MetroLabel()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(280, 172)
+        Me.Button1.Location = New System.Drawing.Point(286, 192)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 50)
         Me.Button1.TabIndex = 38
         Me.Button1.Text = "Confirmar"
+        Me.Button1.UseSelectable = True
         '
         'txt_email
         '
-        Me.txt_email.Location = New System.Drawing.Point(54, 112)
+        '
+        '
+        '
+        Me.txt_email.CustomButton.Image = Nothing
+        Me.txt_email.CustomButton.Location = New System.Drawing.Point(601, 2)
+        Me.txt_email.CustomButton.Name = ""
+        Me.txt_email.CustomButton.Size = New System.Drawing.Size(15, 15)
+        Me.txt_email.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txt_email.CustomButton.TabIndex = 1
+        Me.txt_email.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txt_email.CustomButton.UseSelectable = True
+        Me.txt_email.CustomButton.Visible = False
+        Me.txt_email.Lines = New String(-1) {}
+        Me.txt_email.Location = New System.Drawing.Point(60, 132)
         Me.txt_email.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_email.MaxLength = 32767
         Me.txt_email.Name = "txt_email"
+        Me.txt_email.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_email.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txt_email.SelectedText = ""
+        Me.txt_email.SelectionLength = 0
+        Me.txt_email.SelectionStart = 0
+        Me.txt_email.ShortcutsEnabled = True
         Me.txt_email.Size = New System.Drawing.Size(619, 20)
         Me.txt_email.TabIndex = 33
+        Me.txt_email.UseSelectable = True
+        Me.txt_email.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txt_email.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(51, 85)
+        Me.Label2.Location = New System.Drawing.Point(57, 105)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(135, 20)
+        Me.Label2.Size = New System.Drawing.Size(97, 19)
         Me.Label2.TabIndex = 32
         Me.Label2.Text = "Digite o E-mail"
         '
@@ -62,8 +86,12 @@ Partial Class frm_recuperaradm
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txt_email)
         Me.Controls.Add(Me.Label2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frm_recuperaradm"
-        Me.Text = "Recuprar senha de Administrador"
+        Me.Resizable = False
+        Me.Style = MetroFramework.MetroColorStyle.Orange
+        Me.Text = "Recuperar senha de Administrador ou Funcionário"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
