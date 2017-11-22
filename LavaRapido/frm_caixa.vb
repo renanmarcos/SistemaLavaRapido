@@ -1,6 +1,8 @@
-﻿Public Class frm_caixa
+﻿Imports MetroFramework
+
+Public Class frm_caixa
     Dim contlista, cont, rg As Integer
-    Dim total, desconto As Double
+    Dim total, desconto, precofinal As Double
     Dim resp As String
 
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
@@ -52,7 +54,13 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        resp = MetroMessageBox.Show(Me, "Você está certo disso", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If resp = MsgBoxResult.Yes Then
+            sql = "INSERT INTO tb_caixa (preco_total, data, hora, rg) VALUES(" &
+            "'" & precofinal & "', '" & DateTime.Today.ToShortDateString & "', '" & DateTime.Now.ToShortTimeString & "', " &
+            "'" & rg & "')"
+            db.Execute(sql)
+        End If
     End Sub
 
     Private Sub DataGridView1_CellContentChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_caixa.CellValueChanged
@@ -83,7 +91,7 @@
             desconto = Convert.ToInt16(rs.Fields("qtd_idas").Value) * 0.42
             lbl_desconto.Text = desconto.ToString("c")
         End If
-        lbl_precofinal.Text = (total - desconto).ToString("c")
-
+        precofinal = total - desconto
+        lbl_precofinal.Text = precofinal.ToString("c")
     End Sub
 End Class

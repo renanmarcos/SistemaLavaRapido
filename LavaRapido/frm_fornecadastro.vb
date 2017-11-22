@@ -14,9 +14,19 @@ Public Class frm_fornecadastro
                 "'" & txt_preco.Text & "', '" & dtp_dia.Value.ToShortDateString & "')"
             End If
             db.Execute(sql)
-            frm_fornecedor.Show()
-            Me.Close()
             MetroMessageBox.Show(Me, "Salvo com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            With frm_fornecedor.dgv_fornecedor
+                .Rows.Clear()
+                sql = "select * from tb_fornecedores"
+                rs = db.Execute(sql)
+                Do While rs.EOF = False
+                    .Rows.Add(rs.Fields(0).Value, rs.Fields(1).Value, rs.Fields(2).Value, rs.Fields(3).Value, rs.Fields(4).Value, rs.Fields(5).Value)
+                    rg = rs.Fields(0).Value
+                    rs.MoveNext()
+                Loop
+            End With
+
         End If
 
     End Sub
