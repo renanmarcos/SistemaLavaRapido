@@ -51,6 +51,7 @@ Partial Class frm_caixa
         Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1 = New MetroFramework.Controls.MetroTabControl()
+        Me.btn_gerarg = New MetroFramework.Controls.MetroButton()
         Me.TabPage2.SuspendLayout()
         CType(Me.dgv_caixa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -215,6 +216,7 @@ Partial Class frm_caixa
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.btn_gerarg)
         Me.TabPage1.Controls.Add(Me.btn_gerarm)
         Me.TabPage1.Controls.Add(Me.btn_inciarcaixa)
         Me.TabPage1.Controls.Add(Me.txt_parametros)
@@ -367,6 +369,15 @@ Partial Class frm_caixa
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.UseSelectable = True
         '
+        'btn_gerarg
+        '
+        Me.btn_gerarg.Location = New System.Drawing.Point(491, 274)
+        Me.btn_gerarg.Name = "btn_gerarg"
+        Me.btn_gerarg.Size = New System.Drawing.Size(139, 31)
+        Me.btn_gerarg.TabIndex = 25
+        Me.btn_gerarg.Text = "Gerar Relatório Geral"
+        Me.btn_gerarg.UseSelectable = True
+        '
         'frm_caixa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -413,4 +424,5 @@ Partial Class frm_caixa
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents btn_gerarm As MetroFramework.Controls.MetroButton
+    Friend WithEvents btn_gerarg As MetroFramework.Controls.MetroButton
 End Class

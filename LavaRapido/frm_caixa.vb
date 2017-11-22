@@ -21,6 +21,7 @@ Public Class frm_caixa
                 rs.MoveNext()
             Loop
         End With
+        dgv_dados.Rows(0).Selected = True
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles lbl_precofinal.Click
@@ -37,6 +38,10 @@ Public Class frm_caixa
 
     Private Sub btn_gerarm_Click(sender As Object, e As EventArgs) Handles btn_gerarm.Click
         frm_relatoriomensal.Show()
+    End Sub
+
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles btn_gerarg.Click
+        frm_relatoriototal.Show()
     End Sub
 
     Private Sub txt_parametros_TextChanged(sender As Object, e As EventArgs) Handles txt_parametros.TextChanged

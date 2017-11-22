@@ -187,6 +187,12 @@
     <Compile Include="frm_relatoriomensal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_relatoriototal.Designer.vb">
+      <DependentUpon>frm_relatoriototal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_relatoriototal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="maindbDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -258,6 +264,9 @@
     <EmbeddedResource Include="frm_relatoriomensal.resx">
       <DependentUpon>frm_relatoriomensal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_relatoriototal.resx">
+      <DependentUpon>frm_relatoriototal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="metroInput.resx">
       <DependentUpon>metroInput.vb</DependentUpon>
     </EmbeddedResource>
@@ -267,7 +276,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportMensal.rdlc" />
+    <EmbeddedResource Include="Report.rdlc" />
+    <EmbeddedResource Include="ReportGeral.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="maindbDataSet.xsc">

@@ -23,7 +23,7 @@ Partial Class frm_relatoriomensal
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tb_caixaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.maindbDataSet = New LavaRapido.maindbDataSet()
@@ -39,10 +39,10 @@ Partial Class frm_relatoriomensal
         '
         'ReportViewer1
         '
-        ReportDataSource2.Name = "DataSet1"
-        ReportDataSource2.Value = Me.tb_caixaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "LavaRapido.ReportMensal.rdlc"
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.tb_caixaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "LavaRapido.Report.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(7, 100)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
@@ -76,20 +76,20 @@ Partial Class frm_relatoriomensal
         'MesToolStripLabel
         '
         Me.MesToolStripLabel.Name = "MesToolStripLabel"
-        Me.MesToolStripLabel.Size = New System.Drawing.Size(32, 22)
-        Me.MesToolStripLabel.Text = "mes:"
+        Me.MesToolStripLabel.Size = New System.Drawing.Size(80, 22)
+        Me.MesToolStripLabel.Text = "Digitar o mes:"
         '
         'MesToolStripTextBox
         '
         Me.MesToolStripTextBox.Name = "MesToolStripTextBox"
-        Me.MesToolStripTextBox.Size = New System.Drawing.Size(100, 23)
+        Me.MesToolStripTextBox.Size = New System.Drawing.Size(100, 25)
         '
         'MesToolStripButton
         '
         Me.MesToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.MesToolStripButton.Name = "MesToolStripButton"
-        Me.MesToolStripButton.Size = New System.Drawing.Size(33, 19)
-        Me.MesToolStripButton.Text = "mes"
+        Me.MesToolStripButton.Size = New System.Drawing.Size(56, 22)
+        Me.MesToolStripButton.Text = "procurar"
         '
         'frm_relatoriomensal
         '

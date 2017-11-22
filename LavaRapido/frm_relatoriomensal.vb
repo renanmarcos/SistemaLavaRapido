@@ -21,6 +21,10 @@
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
+        Me.ReportViewer1.RefreshReport()
+    End Sub
+
+    Private Sub MesToolStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MesToolStrip.ItemClicked
 
     End Sub
 End Class
