@@ -2,7 +2,7 @@
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
     Public sql, tipo_conta, usuario, rg As String
-    Public conexao = Application.StartupPath & "\banco\maindb.mdb"
+    Public conexao = Application.StartupPath & "\maindb.mdb"
 
     Sub conecta_banco()
         Try

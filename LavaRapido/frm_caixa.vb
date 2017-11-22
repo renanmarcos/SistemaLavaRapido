@@ -1,7 +1,7 @@
 ﻿Imports MetroFramework
 
 Public Class frm_caixa
-    Dim contlista, cont, rg As Integer
+    Public contlista, cont, rg, caixa
     Dim total, desconto, precofinal As Double
     Dim resp As String
 
@@ -10,6 +10,7 @@ Public Class frm_caixa
     End Sub
 
     Private Sub frm_caixa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        caixa = 0
         conecta_banco()
         With dgv_dados
             .Rows.Clear()
@@ -34,6 +35,10 @@ Public Class frm_caixa
 
     End Sub
 
+    Private Sub btn_gerarm_Click(sender As Object, e As EventArgs) Handles btn_gerarm.Click
+        frm_relatoriomensal.Show()
+    End Sub
+
     Private Sub txt_parametros_TextChanged(sender As Object, e As EventArgs) Handles txt_parametros.TextChanged
         With dgv_dados
             contlista = 1
@@ -54,12 +59,18 @@ Public Class frm_caixa
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        resp = MetroMessageBox.Show(Me, "Você está certo disso", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If resp = MsgBoxResult.Yes Then
-            sql = "INSERT INTO tb_caixa (preco_total, data, hora, rg) VALUES(" &
-            "'" & precofinal & "', '" & DateTime.Today.ToShortDateString & "', '" & DateTime.Now.ToShortTimeString & "', " &
-            "'" & rg & "')"
-            db.Execute(sql)
+        If caixa = 1 Then
+            resp = MetroMessageBox.Show(Me, "Você está certo disso", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If resp = MsgBoxResult.Yes Then
+                sql = "INSERT INTO tb_caixa (preco_total, data, hora, rg, mes) VALUES(" &
+                "'" & precofinal & "', '" & DateTime.Today.ToShortDateString & "', '" & DateTime.Now.ToShortTimeString & "', " &
+                "'" & rg & "', '" & DateTime.Today.Month & "')"
+                db.Execute(sql)
+
+            End If
+        Else
+            MetroMessageBox.Show(Me, "Caixa não foi iniciado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
@@ -88,10 +99,12 @@ Public Class frm_caixa
         sql = "SELECT * from tb_cliente where rg ='" & rg & "'"
         rs = db.Execute(sql)
         If String.Compare(rs.Fields("bonus").ToString, "desconto") Then
-            desconto = Convert.ToInt16(rs.Fields("qtd_idas").Value) * 0.42
+
+            desconto = (Integer.Parse(rs.Fields("qtd_idas").Value)) * 0.42
             lbl_desconto.Text = desconto.ToString("c")
         End If
         precofinal = total - desconto
         lbl_precofinal.Text = precofinal.ToString("c")
+        caixa = 1
     End Sub
 End Class

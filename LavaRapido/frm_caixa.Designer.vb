@@ -28,9 +28,7 @@ Partial Class frm_caixa
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_caixa))
-
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New MetroFramework.Controls.MetroTabPage()
@@ -45,6 +43,7 @@ Partial Class frm_caixa
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button2 = New MetroFramework.Controls.MetroButton()
         Me.TabPage1 = New MetroFramework.Controls.MetroTabPage()
+        Me.btn_gerarm = New MetroFramework.Controls.MetroButton()
         Me.btn_inciarcaixa = New MetroFramework.Controls.MetroButton()
         Me.txt_parametros = New MetroFramework.Controls.MetroTextBox()
         Me.Label2 = New MetroFramework.Controls.MetroLabel()
@@ -81,24 +80,22 @@ Partial Class frm_caixa
         Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.HorizontalScrollbarBarColor = True
         Me.TabPage2.HorizontalScrollbarHighlightOnWheel = False
-        Me.TabPage2.HorizontalScrollbarSize = 15
+        Me.TabPage2.HorizontalScrollbarSize = 10
         Me.TabPage2.Location = New System.Drawing.Point(4, 38)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage2.Size = New System.Drawing.Size(1070, 684)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(711, 430)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Caixa"
         Me.TabPage2.UseVisualStyleBackColor = True
         Me.TabPage2.VerticalScrollbarBarColor = True
         Me.TabPage2.VerticalScrollbarHighlightOnWheel = False
-        Me.TabPage2.VerticalScrollbarSize = 15
+        Me.TabPage2.VerticalScrollbarSize = 10
         '
         'lbl_precofinal
         '
         Me.lbl_precofinal.AutoSize = True
-        Me.lbl_precofinal.Location = New System.Drawing.Point(670, 580)
-        Me.lbl_precofinal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_precofinal.Location = New System.Drawing.Point(447, 377)
         Me.lbl_precofinal.Name = "lbl_precofinal"
         Me.lbl_precofinal.Size = New System.Drawing.Size(52, 19)
         Me.lbl_precofinal.TabIndex = 7
@@ -107,8 +104,7 @@ Partial Class frm_caixa
         'lbl_desconto
         '
         Me.lbl_desconto.AutoSize = True
-        Me.lbl_desconto.Location = New System.Drawing.Point(670, 542)
-        Me.lbl_desconto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_desconto.Location = New System.Drawing.Point(447, 352)
         Me.lbl_desconto.Name = "lbl_desconto"
         Me.lbl_desconto.Size = New System.Drawing.Size(52, 19)
         Me.lbl_desconto.TabIndex = 6
@@ -117,8 +113,7 @@ Partial Class frm_caixa
         'lbl_total
         '
         Me.lbl_total.AutoSize = True
-        Me.lbl_total.Location = New System.Drawing.Point(670, 505)
-        Me.lbl_total.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_total.Location = New System.Drawing.Point(447, 328)
         Me.lbl_total.Name = "lbl_total"
         Me.lbl_total.Size = New System.Drawing.Size(52, 19)
         Me.lbl_total.TabIndex = 5
@@ -127,8 +122,7 @@ Partial Class frm_caixa
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(534, 580)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(356, 377)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(74, 19)
         Me.Label4.TabIndex = 4
@@ -137,8 +131,7 @@ Partial Class frm_caixa
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(552, 542)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(368, 352)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 19)
         Me.Label3.TabIndex = 3
@@ -147,10 +140,9 @@ Partial Class frm_caixa
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(592, 505)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(395, 328)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 19)
+        Me.Label1.Size = New System.Drawing.Size(39, 19)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Total:"
         '
@@ -183,8 +175,7 @@ Partial Class frm_caixa
         Me.dgv_caixa.EnableHeadersVisualStyles = False
         Me.dgv_caixa.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgv_caixa.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgv_caixa.Location = New System.Drawing.Point(62, 51)
-        Me.dgv_caixa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgv_caixa.Location = New System.Drawing.Point(41, 33)
         Me.dgv_caixa.Name = "dgv_caixa"
         Me.dgv_caixa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -197,7 +188,7 @@ Partial Class frm_caixa
         Me.dgv_caixa.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgv_caixa.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgv_caixa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgv_caixa.Size = New System.Drawing.Size(366, 558)
+        Me.dgv_caixa.Size = New System.Drawing.Size(244, 363)
         Me.dgv_caixa.TabIndex = 1
         '
         'Column3
@@ -215,41 +206,48 @@ Partial Class frm_caixa
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(840, 580)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button2.Location = New System.Drawing.Point(560, 377)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(188, 46)
+        Me.Button2.Size = New System.Drawing.Size(125, 30)
         Me.Button2.TabIndex = 0
         Me.Button2.Text = "Finalizar "
         Me.Button2.UseSelectable = True
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.btn_gerarm)
         Me.TabPage1.Controls.Add(Me.btn_inciarcaixa)
         Me.TabPage1.Controls.Add(Me.txt_parametros)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.dgv_dados)
         Me.TabPage1.HorizontalScrollbarBarColor = True
         Me.TabPage1.HorizontalScrollbarHighlightOnWheel = False
-        Me.TabPage1.HorizontalScrollbarSize = 15
+        Me.TabPage1.HorizontalScrollbarSize = 10
         Me.TabPage1.Location = New System.Drawing.Point(4, 38)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage1.Size = New System.Drawing.Size(1070, 684)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(711, 430)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inicio"
         Me.TabPage1.UseVisualStyleBackColor = True
         Me.TabPage1.VerticalScrollbarBarColor = True
         Me.TabPage1.VerticalScrollbarHighlightOnWheel = False
-        Me.TabPage1.VerticalScrollbarSize = 15
+        Me.TabPage1.VerticalScrollbarSize = 10
+        '
+        'btn_gerarm
+        '
+        Me.btn_gerarm.Location = New System.Drawing.Point(491, 327)
+        Me.btn_gerarm.Name = "btn_gerarm"
+        Me.btn_gerarm.Size = New System.Drawing.Size(139, 31)
+        Me.btn_gerarm.TabIndex = 24
+        Me.btn_gerarm.Text = "Gerar Relatório Mensal"
+        Me.btn_gerarm.UseSelectable = True
         '
         'btn_inciarcaixa
         '
-        Me.btn_inciarcaixa.Location = New System.Drawing.Point(736, 578)
-        Me.btn_inciarcaixa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_inciarcaixa.Location = New System.Drawing.Point(491, 376)
         Me.btn_inciarcaixa.Name = "btn_inciarcaixa"
-        Me.btn_inciarcaixa.Size = New System.Drawing.Size(147, 48)
+        Me.btn_inciarcaixa.Size = New System.Drawing.Size(98, 31)
         Me.btn_inciarcaixa.TabIndex = 23
         Me.btn_inciarcaixa.Text = "Iniciar Caixa"
         Me.btn_inciarcaixa.UseSelectable = True
@@ -260,17 +258,17 @@ Partial Class frm_caixa
         '
         '
         Me.txt_parametros.CustomButton.Image = Nothing
-        Me.txt_parametros.CustomButton.Location = New System.Drawing.Point(573, 2)
-        Me.txt_parametros.CustomButton.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_parametros.CustomButton.Location = New System.Drawing.Point(257, 2)
         Me.txt_parametros.CustomButton.Name = ""
-        Me.txt_parametros.CustomButton.Size = New System.Drawing.Size(44, 45)
+        Me.txt_parametros.CustomButton.Size = New System.Drawing.Size(15, 15)
         Me.txt_parametros.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_parametros.CustomButton.TabIndex = 1
         Me.txt_parametros.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_parametros.CustomButton.UseSelectable = True
         Me.txt_parametros.CustomButton.Visible = False
         Me.txt_parametros.Lines = New String(-1) {}
-        Me.txt_parametros.Location = New System.Drawing.Point(48, 74)
+        Me.txt_parametros.Location = New System.Drawing.Point(32, 48)
+        Me.txt_parametros.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_parametros.MaxLength = 32767
         Me.txt_parametros.Name = "txt_parametros"
         Me.txt_parametros.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -279,7 +277,7 @@ Partial Class frm_caixa
         Me.txt_parametros.SelectionLength = 0
         Me.txt_parametros.SelectionStart = 0
         Me.txt_parametros.ShortcutsEnabled = True
-        Me.txt_parametros.Size = New System.Drawing.Size(412, 31)
+        Me.txt_parametros.Size = New System.Drawing.Size(275, 20)
         Me.txt_parametros.TabIndex = 22
         Me.txt_parametros.UseSelectable = True
         Me.txt_parametros.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -288,7 +286,8 @@ Partial Class frm_caixa
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(42, 20)
+        Me.Label2.Location = New System.Drawing.Point(28, 13)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(140, 19)
         Me.Label2.TabIndex = 21
@@ -326,7 +325,8 @@ Partial Class frm_caixa
         Me.dgv_dados.EnableHeadersVisualStyles = False
         Me.dgv_dados.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgv_dados.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgv_dados.Location = New System.Drawing.Point(48, 129)
+        Me.dgv_dados.Location = New System.Drawing.Point(32, 84)
+        Me.dgv_dados.Margin = New System.Windows.Forms.Padding(2)
         Me.dgv_dados.Name = "dgv_dados"
         Me.dgv_dados.ReadOnly = True
         Me.dgv_dados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -341,7 +341,7 @@ Partial Class frm_caixa
         Me.dgv_dados.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgv_dados.RowTemplate.Height = 28
         Me.dgv_dados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_dados.Size = New System.Drawing.Size(666, 498)
+        Me.dgv_dados.Size = New System.Drawing.Size(444, 324)
         Me.dgv_dados.TabIndex = 20
         '
         'numero
@@ -360,24 +360,21 @@ Partial Class frm_caixa
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(2, 97)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabControl1.Location = New System.Drawing.Point(1, 63)
         Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 1
-        Me.TabControl1.Size = New System.Drawing.Size(1078, 726)
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(719, 472)
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.UseSelectable = True
         '
         'frm_caixa
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1083, 826)
+        Me.ClientSize = New System.Drawing.Size(722, 537)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frm_caixa"
-        Me.Padding = New System.Windows.Forms.Padding(30, 92, 30, 31)
         Me.Text = "Caixa"
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
@@ -415,4 +412,5 @@ Partial Class frm_caixa
     Friend WithEvents TabControl1 As MetroFramework.Controls.MetroTabControl
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents btn_gerarm As MetroFramework.Controls.MetroButton
 End Class
