@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F5858A2C-67B4-4AF7-9979-1809F2B85A2E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>LavaRapido.My.MyApplication</StartupObject>
+    <StartupObject>LavaRapido.frm_caixa</StartupObject>
     <RootNamespace>LavaRapido</RootNamespace>
     <AssemblyName>LavaRapido</AssemblyName>
     <FileAlignment>512</FileAlignment>

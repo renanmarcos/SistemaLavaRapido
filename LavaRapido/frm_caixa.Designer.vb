@@ -28,10 +28,9 @@ Partial Class frm_caixa
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-<<<<<<< HEAD
-=======
+
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_caixa))
->>>>>>> 30f269c153a0f2c34048a06d629d7566568568d8
+
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New MetroFramework.Controls.MetroTabPage()
@@ -128,12 +127,8 @@ Partial Class frm_caixa
         'Label4
         '
         Me.Label4.AutoSize = True
-<<<<<<< HEAD
-        Me.Label4.Location = New System.Drawing.Point(360, 377)
-=======
         Me.Label4.Location = New System.Drawing.Point(534, 580)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
->>>>>>> 30f269c153a0f2c34048a06d629d7566568568d8
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(74, 19)
         Me.Label4.TabIndex = 4
