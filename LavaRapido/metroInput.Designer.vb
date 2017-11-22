@@ -22,17 +22,20 @@ Partial Class metroInput
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(metroInput))
         Me.btn_ok = New MetroFramework.Controls.MetroButton()
         Me.txt_input = New MetroFramework.Controls.MetroTextBox()
         Me.btn_cancelar = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.lbl_titulo = New MetroFramework.Controls.MetroLabel()
+        Me.msk_txt = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'btn_ok
         '
-        Me.btn_ok.Location = New System.Drawing.Point(255, 54)
+        Me.btn_ok.Location = New System.Drawing.Point(382, 83)
+        Me.btn_ok.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_ok.Name = "btn_ok"
-        Me.btn_ok.Size = New System.Drawing.Size(75, 23)
+        Me.btn_ok.Size = New System.Drawing.Size(112, 35)
         Me.btn_ok.TabIndex = 0
         Me.btn_ok.Text = "Ok"
         Me.btn_ok.UseSelectable = True
@@ -43,16 +46,18 @@ Partial Class metroInput
         '
         '
         Me.txt_input.CustomButton.Image = Nothing
-        Me.txt_input.CustomButton.Location = New System.Drawing.Point(204, 1)
+        Me.txt_input.CustomButton.Location = New System.Drawing.Point(458, 2)
+        Me.txt_input.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_input.CustomButton.Name = ""
-        Me.txt_input.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txt_input.CustomButton.Size = New System.Drawing.Size(50, 51)
         Me.txt_input.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_input.CustomButton.TabIndex = 1
         Me.txt_input.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_input.CustomButton.UseSelectable = True
         Me.txt_input.CustomButton.Visible = False
         Me.txt_input.Lines = New String(-1) {}
-        Me.txt_input.Location = New System.Drawing.Point(23, 54)
+        Me.txt_input.Location = New System.Drawing.Point(34, 83)
+        Me.txt_input.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_input.MaxLength = 32767
         Me.txt_input.Name = "txt_input"
         Me.txt_input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -61,7 +66,7 @@ Partial Class metroInput
         Me.txt_input.SelectionLength = 0
         Me.txt_input.SelectionStart = 0
         Me.txt_input.ShortcutsEnabled = True
-        Me.txt_input.Size = New System.Drawing.Size(226, 23)
+        Me.txt_input.Size = New System.Drawing.Size(339, 35)
         Me.txt_input.TabIndex = 2
         Me.txt_input.UseSelectable = True
         Me.txt_input.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -69,37 +74,50 @@ Partial Class metroInput
         '
         'btn_cancelar
         '
-        Me.btn_cancelar.Location = New System.Drawing.Point(255, 83)
+        Me.btn_cancelar.Location = New System.Drawing.Point(382, 128)
+        Me.btn_cancelar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_cancelar.Name = "btn_cancelar"
-        Me.btn_cancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_cancelar.Size = New System.Drawing.Size(112, 35)
         Me.btn_cancelar.TabIndex = 3
         Me.btn_cancelar.Text = "Cancelar"
         Me.btn_cancelar.UseSelectable = True
         '
-        'MetroLabel1
+        'lbl_titulo
         '
-        Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.Location = New System.Drawing.Point(23, 22)
-        Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(199, 19)
-        Me.MetroLabel1.TabIndex = 5
-        Me.MetroLabel1.Text = "Digite o código de confirmação:"
+        Me.lbl_titulo.AutoSize = True
+        Me.lbl_titulo.Location = New System.Drawing.Point(34, 34)
+        Me.lbl_titulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_titulo.Name = "lbl_titulo"
+        Me.lbl_titulo.Size = New System.Drawing.Size(120, 19)
+        Me.lbl_titulo.TabIndex = 5
+        Me.lbl_titulo.Text = "Texto de título aqui"
+        '
+        'msk_txt
+        '
+        Me.msk_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.3!)
+        Me.msk_txt.Location = New System.Drawing.Point(34, 83)
+        Me.msk_txt.Name = "msk_txt"
+        Me.msk_txt.Size = New System.Drawing.Size(339, 37)
+        Me.msk_txt.TabIndex = 6
         '
         'metroInput
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(356, 124)
+        Me.ClientSize = New System.Drawing.Size(534, 191)
         Me.ControlBox = False
-        Me.Controls.Add(Me.MetroLabel1)
+        Me.Controls.Add(Me.msk_txt)
+        Me.Controls.Add(Me.lbl_titulo)
         Me.Controls.Add(Me.btn_ok)
         Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.txt_input)
         Me.DisplayHeader = False
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "metroInput"
-        Me.Padding = New System.Windows.Forms.Padding(20, 30, 20, 20)
+        Me.Padding = New System.Windows.Forms.Padding(30, 46, 30, 31)
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.ShowIcon = False
@@ -114,5 +132,6 @@ Partial Class metroInput
     Friend WithEvents btn_ok As MetroFramework.Controls.MetroButton
     Friend WithEvents txt_input As MetroFramework.Controls.MetroTextBox
     Friend WithEvents btn_cancelar As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lbl_titulo As MetroFramework.Controls.MetroLabel
+    Friend WithEvents msk_txt As MaskedTextBox
 End Class

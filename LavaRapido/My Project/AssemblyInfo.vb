@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Revise os valores dos atributos do assembly
 
-<Assembly: AssemblyTitle("SistemaContabilidade")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("SistemaContabilidade")>
+<Assembly: AssemblyTitle("Lava Rapido")>
+<Assembly: AssemblyDescription("Sistema de Lava Rápido")>
+<Assembly: AssemblyCompany("SUA EMPRESA")>
+<Assembly: AssemblyProduct("Lava Rapido")>
 <Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("")>
 

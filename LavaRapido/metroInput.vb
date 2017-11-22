@@ -1,11 +1,27 @@
 ﻿Public Class metroInput
     Protected m_BlankValid As Boolean = True
     Protected m_ReturnText As String = ""
+    Private flagMask As Boolean
 
     Public Overloads Function ShowDialog(
       ByRef EnteredText As String,
-      ByVal BlankValid As Boolean) As DialogResult
+      ByRef Title As String,
+      ByVal BlankValid As Boolean,
+      ByVal HasMask As Boolean,
+      ByRef Mask As String) As DialogResult
         m_BlankValid = BlankValid
+        lbl_titulo.Text = Title
+        msk_txt.Hide()
+
+        If HasMask Then
+            msk_txt.Show()
+            txt_input.Hide()
+            msk_txt.Mask = Mask
+            flagMask = True
+        Else
+            flagMask = False
+        End If
+
         ShowDialog()
         EnteredText = m_ReturnText
         Return DialogResult
@@ -21,7 +37,15 @@
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_ok.Click
         DialogResult = DialogResult.OK
-        m_ReturnText = txt_input.Text
+        If flagMask Then
+            If msk_txt.MaskCompleted = False Then
+                m_ReturnText = "incompleto"
+            Else
+                m_ReturnText = msk_txt.Text
+            End If
+        Else
+            m_ReturnText = txt_input.Text
+        End If
         Close()
     End Sub
 

@@ -62,6 +62,7 @@ Public Class frm_login
                         tipo_conta = rs.Fields("tipo_conta").Value
                         rg = rs.Fields("rg").Value
                         frm_menu.Show()
+                        Hide()
                     Else
                         MetroMessageBox.Show(Me, "Você precisa acessar como " & rs.Fields("tipo_conta").Value, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End If
@@ -106,5 +107,10 @@ Public Class frm_login
     Private Sub link_esqueceu_Click(sender As Object, e As EventArgs) Handles link_esqueceu.Click
         usuario = txt_usuario.Text
         frm_recuperar.Show()
+        Hide()
+    End Sub
+
+    Private Sub frm_login_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        frm_menuinicial.Show()
     End Sub
 End Class
