@@ -196,11 +196,28 @@ Public Class frm_fila
         If txt_carro.Text = Nothing Or txt_placa.MaskCompleted = False Or total = 0 Or txt_hora.Text = Nothing Then
             MetroMessageBox.Show(Me, "Você precisa preencher todos os campos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
+            If tipo_conta = "Visitante" Then
+                Dim inputUsuario As New metroInput
+                Dim text As String = ""
+                inputUsuario.ShowDialog(text, "Digite o seu RG:", False, True, "00,000,000-0")
+
+                If text = "" Then
+                    Exit Sub
+                ElseIf text = "incompleto" Then
+                    MsgBox("incompleto")
+                    Exit Sub
+                Else
+                    MsgBox(text)
+                    rg = text
+                End If
+
+            End If
+
             Try
                 Dim horarioInicio As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("08:00"))
                 Dim horarioAlmoco As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("12:00").AddMinutes(-30))
                 Dim horarioDepoisAlmoco As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("13:00"))
-                Dim horarioFinal As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("21:00").AddMinutes(-30))
+                Dim horarioFinal As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("17:00").AddMinutes(-30))
 
                 If (((horarioInicio < 0) Or (horarioAlmoco > 0)) And ((horarioDepoisAlmoco < 0) Or (horarioFinal > 0))) Or (dtp_dia.Value.DayOfWeek = 6 Or dtp_dia.Value.DayOfWeek = 0) Then
                     MetroMessageBox.Show(Me, "Você precisa digitar uma hora e dia válidos." & vbCrLf &

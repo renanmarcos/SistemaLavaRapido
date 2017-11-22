@@ -22,12 +22,13 @@ Partial Class frm_caixa
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_caixa))
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage2 = New MetroFramework.Controls.MetroTabPage()
@@ -78,22 +79,24 @@ Partial Class frm_caixa
         Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.HorizontalScrollbarBarColor = True
         Me.TabPage2.HorizontalScrollbarHighlightOnWheel = False
-        Me.TabPage2.HorizontalScrollbarSize = 10
+        Me.TabPage2.HorizontalScrollbarSize = 15
         Me.TabPage2.Location = New System.Drawing.Point(4, 38)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(711, 430)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage2.Size = New System.Drawing.Size(1070, 684)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Caixa"
         Me.TabPage2.UseVisualStyleBackColor = True
         Me.TabPage2.VerticalScrollbarBarColor = True
         Me.TabPage2.VerticalScrollbarHighlightOnWheel = False
-        Me.TabPage2.VerticalScrollbarSize = 10
+        Me.TabPage2.VerticalScrollbarSize = 15
         '
         'lbl_precofinal
         '
         Me.lbl_precofinal.AutoSize = True
-        Me.lbl_precofinal.Location = New System.Drawing.Point(447, 377)
+        Me.lbl_precofinal.Location = New System.Drawing.Point(670, 580)
+        Me.lbl_precofinal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_precofinal.Name = "lbl_precofinal"
         Me.lbl_precofinal.Size = New System.Drawing.Size(52, 19)
         Me.lbl_precofinal.TabIndex = 7
@@ -102,7 +105,8 @@ Partial Class frm_caixa
         'lbl_desconto
         '
         Me.lbl_desconto.AutoSize = True
-        Me.lbl_desconto.Location = New System.Drawing.Point(447, 352)
+        Me.lbl_desconto.Location = New System.Drawing.Point(670, 542)
+        Me.lbl_desconto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_desconto.Name = "lbl_desconto"
         Me.lbl_desconto.Size = New System.Drawing.Size(52, 19)
         Me.lbl_desconto.TabIndex = 6
@@ -111,7 +115,8 @@ Partial Class frm_caixa
         'lbl_total
         '
         Me.lbl_total.AutoSize = True
-        Me.lbl_total.Location = New System.Drawing.Point(447, 328)
+        Me.lbl_total.Location = New System.Drawing.Point(670, 505)
+        Me.lbl_total.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_total.Name = "lbl_total"
         Me.lbl_total.Size = New System.Drawing.Size(52, 19)
         Me.lbl_total.TabIndex = 5
@@ -120,7 +125,8 @@ Partial Class frm_caixa
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(356, 377)
+        Me.Label4.Location = New System.Drawing.Point(534, 580)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(74, 19)
         Me.Label4.TabIndex = 4
@@ -129,7 +135,8 @@ Partial Class frm_caixa
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(368, 352)
+        Me.Label3.Location = New System.Drawing.Point(552, 542)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 19)
         Me.Label3.TabIndex = 3
@@ -138,7 +145,8 @@ Partial Class frm_caixa
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(395, 328)
+        Me.Label1.Location = New System.Drawing.Point(592, 505)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 19)
         Me.Label1.TabIndex = 2
@@ -153,40 +161,41 @@ Partial Class frm_caixa
         Me.dgv_caixa.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_caixa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgv_caixa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_caixa.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_caixa.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_caixa.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4})
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv_caixa.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_caixa.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgv_caixa.EnableHeadersVisualStyles = False
         Me.dgv_caixa.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgv_caixa.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgv_caixa.Location = New System.Drawing.Point(41, 33)
+        Me.dgv_caixa.Location = New System.Drawing.Point(62, 51)
+        Me.dgv_caixa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgv_caixa.Name = "dgv_caixa"
         Me.dgv_caixa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_caixa.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_caixa.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgv_caixa.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgv_caixa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgv_caixa.Size = New System.Drawing.Size(244, 363)
+        Me.dgv_caixa.Size = New System.Drawing.Size(366, 558)
         Me.dgv_caixa.TabIndex = 1
         '
         'Column3
@@ -204,9 +213,10 @@ Partial Class frm_caixa
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(560, 377)
+        Me.Button2.Location = New System.Drawing.Point(840, 580)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(125, 30)
+        Me.Button2.Size = New System.Drawing.Size(188, 46)
         Me.Button2.TabIndex = 0
         Me.Button2.Text = "Finalizar "
         Me.Button2.UseSelectable = True
@@ -219,23 +229,25 @@ Partial Class frm_caixa
         Me.TabPage1.Controls.Add(Me.dgv_dados)
         Me.TabPage1.HorizontalScrollbarBarColor = True
         Me.TabPage1.HorizontalScrollbarHighlightOnWheel = False
-        Me.TabPage1.HorizontalScrollbarSize = 10
+        Me.TabPage1.HorizontalScrollbarSize = 15
         Me.TabPage1.Location = New System.Drawing.Point(4, 38)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(711, 430)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage1.Size = New System.Drawing.Size(1070, 684)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Inicio"
         Me.TabPage1.UseVisualStyleBackColor = True
         Me.TabPage1.VerticalScrollbarBarColor = True
         Me.TabPage1.VerticalScrollbarHighlightOnWheel = False
-        Me.TabPage1.VerticalScrollbarSize = 10
+        Me.TabPage1.VerticalScrollbarSize = 15
         '
         'btn_inciarcaixa
         '
-        Me.btn_inciarcaixa.Location = New System.Drawing.Point(491, 376)
+        Me.btn_inciarcaixa.Location = New System.Drawing.Point(736, 578)
+        Me.btn_inciarcaixa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_inciarcaixa.Name = "btn_inciarcaixa"
-        Me.btn_inciarcaixa.Size = New System.Drawing.Size(98, 31)
+        Me.btn_inciarcaixa.Size = New System.Drawing.Size(147, 48)
         Me.btn_inciarcaixa.TabIndex = 23
         Me.btn_inciarcaixa.Text = "Iniciar Caixa"
         Me.btn_inciarcaixa.UseSelectable = True
@@ -246,17 +258,17 @@ Partial Class frm_caixa
         '
         '
         Me.txt_parametros.CustomButton.Image = Nothing
-        Me.txt_parametros.CustomButton.Location = New System.Drawing.Point(257, 2)
+        Me.txt_parametros.CustomButton.Location = New System.Drawing.Point(573, 2)
+        Me.txt_parametros.CustomButton.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_parametros.CustomButton.Name = ""
-        Me.txt_parametros.CustomButton.Size = New System.Drawing.Size(15, 15)
+        Me.txt_parametros.CustomButton.Size = New System.Drawing.Size(44, 45)
         Me.txt_parametros.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_parametros.CustomButton.TabIndex = 1
         Me.txt_parametros.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_parametros.CustomButton.UseSelectable = True
         Me.txt_parametros.CustomButton.Visible = False
         Me.txt_parametros.Lines = New String(-1) {}
-        Me.txt_parametros.Location = New System.Drawing.Point(32, 48)
-        Me.txt_parametros.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_parametros.Location = New System.Drawing.Point(48, 74)
         Me.txt_parametros.MaxLength = 32767
         Me.txt_parametros.Name = "txt_parametros"
         Me.txt_parametros.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -265,7 +277,7 @@ Partial Class frm_caixa
         Me.txt_parametros.SelectionLength = 0
         Me.txt_parametros.SelectionStart = 0
         Me.txt_parametros.ShortcutsEnabled = True
-        Me.txt_parametros.Size = New System.Drawing.Size(275, 20)
+        Me.txt_parametros.Size = New System.Drawing.Size(412, 31)
         Me.txt_parametros.TabIndex = 22
         Me.txt_parametros.UseSelectable = True
         Me.txt_parametros.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -274,8 +286,7 @@ Partial Class frm_caixa
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 13)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(42, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(140, 19)
         Me.Label2.TabIndex = 21
@@ -292,44 +303,43 @@ Partial Class frm_caixa
         Me.dgv_dados.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_dados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgv_dados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_dados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_dados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgv_dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_dados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numero, Me.usuario})
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv_dados.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_dados.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgv_dados.EnableHeadersVisualStyles = False
         Me.dgv_dados.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgv_dados.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgv_dados.Location = New System.Drawing.Point(32, 84)
-        Me.dgv_dados.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgv_dados.Location = New System.Drawing.Point(48, 129)
         Me.dgv_dados.Name = "dgv_dados"
         Me.dgv_dados.ReadOnly = True
         Me.dgv_dados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_dados.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_dados.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgv_dados.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgv_dados.RowTemplate.Height = 28
         Me.dgv_dados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_dados.Size = New System.Drawing.Size(444, 324)
+        Me.dgv_dados.Size = New System.Drawing.Size(666, 498)
         Me.dgv_dados.TabIndex = 20
         '
         'numero
@@ -348,20 +358,24 @@ Partial Class frm_caixa
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(1, 63)
+        Me.TabControl1.Location = New System.Drawing.Point(2, 97)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 1
-        Me.TabControl1.Size = New System.Drawing.Size(719, 472)
+        Me.TabControl1.Size = New System.Drawing.Size(1078, 726)
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.UseSelectable = True
         '
         'frm_caixa
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(722, 537)
+        Me.ClientSize = New System.Drawing.Size(1083, 826)
         Me.Controls.Add(Me.TabControl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frm_caixa"
+        Me.Padding = New System.Windows.Forms.Padding(30, 92, 30, 31)
         Me.Text = "Caixa"
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()

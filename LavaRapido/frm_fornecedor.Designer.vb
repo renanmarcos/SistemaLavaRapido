@@ -25,6 +25,7 @@ Partial Class frm_fornecedor
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_fornecedor))
         Me.btn_Adicionar = New MetroFramework.Controls.MetroButton()
         Me.lbl_parametro = New MetroFramework.Controls.MetroLabel()
         Me.txt_parametros = New MetroFramework.Controls.MetroTextBox()
@@ -43,9 +44,10 @@ Partial Class frm_fornecedor
         '
         'btn_Adicionar
         '
-        Me.btn_Adicionar.Location = New System.Drawing.Point(454, 98)
+        Me.btn_Adicionar.Location = New System.Drawing.Point(681, 151)
+        Me.btn_Adicionar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_Adicionar.Name = "btn_Adicionar"
-        Me.btn_Adicionar.Size = New System.Drawing.Size(153, 23)
+        Me.btn_Adicionar.Size = New System.Drawing.Size(230, 35)
         Me.btn_Adicionar.TabIndex = 27
         Me.btn_Adicionar.Text = "Adicionar novo Registro"
         Me.btn_Adicionar.UseSelectable = True
@@ -53,8 +55,7 @@ Partial Class frm_fornecedor
         'lbl_parametro
         '
         Me.lbl_parametro.AutoSize = True
-        Me.lbl_parametro.Location = New System.Drawing.Point(27, 66)
-        Me.lbl_parametro.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_parametro.Location = New System.Drawing.Point(40, 102)
         Me.lbl_parametro.Name = "lbl_parametro"
         Me.lbl_parametro.Size = New System.Drawing.Size(181, 19)
         Me.lbl_parametro.TabIndex = 21
@@ -66,17 +67,17 @@ Partial Class frm_fornecedor
         '
         '
         Me.txt_parametros.CustomButton.Image = Nothing
-        Me.txt_parametros.CustomButton.Location = New System.Drawing.Point(241, 2)
+        Me.txt_parametros.CustomButton.Location = New System.Drawing.Point(537, 2)
+        Me.txt_parametros.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_parametros.CustomButton.Name = ""
-        Me.txt_parametros.CustomButton.Size = New System.Drawing.Size(15, 15)
+        Me.txt_parametros.CustomButton.Size = New System.Drawing.Size(44, 45)
         Me.txt_parametros.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_parametros.CustomButton.TabIndex = 1
         Me.txt_parametros.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_parametros.CustomButton.UseSelectable = True
         Me.txt_parametros.CustomButton.Visible = False
         Me.txt_parametros.Lines = New String(-1) {}
-        Me.txt_parametros.Location = New System.Drawing.Point(30, 98)
-        Me.txt_parametros.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_parametros.Location = New System.Drawing.Point(45, 151)
         Me.txt_parametros.MaxLength = 32767
         Me.txt_parametros.Name = "txt_parametros"
         Me.txt_parametros.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -85,7 +86,7 @@ Partial Class frm_fornecedor
         Me.txt_parametros.SelectionLength = 0
         Me.txt_parametros.SelectionStart = 0
         Me.txt_parametros.ShortcutsEnabled = True
-        Me.txt_parametros.Size = New System.Drawing.Size(259, 20)
+        Me.txt_parametros.Size = New System.Drawing.Size(388, 31)
         Me.txt_parametros.TabIndex = 22
         Me.txt_parametros.UseSelectable = True
         Me.txt_parametros.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -176,7 +177,8 @@ Partial Class frm_fornecedor
         Me.dgv_fornecedor.EnableHeadersVisualStyles = False
         Me.dgv_fornecedor.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgv_fornecedor.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgv_fornecedor.Location = New System.Drawing.Point(27, 134)
+        Me.dgv_fornecedor.Location = New System.Drawing.Point(40, 206)
+        Me.dgv_fornecedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgv_fornecedor.Name = "dgv_fornecedor"
         Me.dgv_fornecedor.ReadOnly = True
         Me.dgv_fornecedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -190,32 +192,33 @@ Partial Class frm_fornecedor
         Me.dgv_fornecedor.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgv_fornecedor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgv_fornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgv_fornecedor.Size = New System.Drawing.Size(707, 358)
+        Me.dgv_fornecedor.Size = New System.Drawing.Size(1060, 551)
         Me.dgv_fornecedor.TabIndex = 26
         '
         'cmb_selecao
         '
         Me.cmb_selecao.FormattingEnabled = True
         Me.cmb_selecao.ItemHeight = 23
-        Me.cmb_selecao.Location = New System.Drawing.Point(312, 92)
+        Me.cmb_selecao.Location = New System.Drawing.Point(468, 142)
+        Me.cmb_selecao.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmb_selecao.Name = "cmb_selecao"
-        Me.cmb_selecao.Size = New System.Drawing.Size(121, 29)
+        Me.cmb_selecao.Size = New System.Drawing.Size(180, 29)
         Me.cmb_selecao.TabIndex = 28
         Me.cmb_selecao.UseSelectable = True
         '
         'frm_fornecedor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 537)
+        Me.ClientSize = New System.Drawing.Size(1188, 826)
         Me.Controls.Add(Me.cmb_selecao)
         Me.Controls.Add(Me.btn_Adicionar)
         Me.Controls.Add(Me.dgv_fornecedor)
         Me.Controls.Add(Me.txt_parametros)
         Me.Controls.Add(Me.lbl_parametro)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_fornecedor"
-        Me.Padding = New System.Windows.Forms.Padding(13, 60, 13, 13)
+        Me.Padding = New System.Windows.Forms.Padding(20, 92, 20, 20)
         Me.Text = "Fornecedores"
         CType(Me.dgv_fornecedor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

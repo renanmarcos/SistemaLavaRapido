@@ -10,16 +10,10 @@ Public Class frm_cadastrocli
             .Add("Nome da empresa do seu primeiro emprego?")
         End With
         cmb_perguntas.SelectedIndex = 0
-
-        With cmb_tipo.Items
-            .Add("Usuário")
-            .Add("Administrador")
-        End With
-        cmb_tipo.SelectedIndex = 0
         conecta_banco()
     End Sub
 
-    Private Sub cb_visualizar_CheckedChanged(sender As Object, e As EventArgs) Handles cb_visualizar.CheckedChanged
+    Private Sub cb_visualizar_CheckedChanged(sender As Object, e As EventArgs)
         If cb_visualizar.Checked Then
             txt_senha.PasswordChar = Nothing
             txt_repetir.PasswordChar = Nothing
@@ -29,18 +23,21 @@ Public Class frm_cadastrocli
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btn_criar_Click(sender As Object, e As EventArgs) Handles btn_criar.Click
         If txt_usuario.Text = Nothing Or txt_email.Text = Nothing Or txt_senha.Text = Nothing Or txt_repetir.Text = Nothing Or txt_resposta.Text = Nothing Then
             MetroMessageBox.Show(Me, "Todos os campos precisam ser preenchidos", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Else
             If StrComp(txt_senha.Text, txt_repetir.Text, vbBinaryCompare) = 0 Then
-                sql = "SELECT * FROM tb_login WHERE usuario='" & txt_usuario.Text & "'"
+                sql = "SELECT * FROM tb_cliente WHERE usuario='" & txt_usuario.Text & "'"
                 rs = db.Execute(sql)
 
                 If rs.EOF = True Then
-                    sql = "INSERT INTO tb_login (usuario, email, senha, pergunta_secreta, resposta_secreta, status_conta, tipo_conta, n_tentativas) VALUES ('" & txt_usuario.Text & "', '" _
-                      & txt_email.Text & "', '" & txt_senha.Text & "', '" & cmb_perguntas.Text & "', '" _
-                      & txt_resposta.Text & "', 'ativa', '" & cmb_tipo.Text & "', 3)"
+                    sql = "INSERT INTO tb_cliente (rg, nome, usuario, senha, cpf, datanasc, foneres, cel, email," &
+                          "pergunta_secreta, resposta_secreta) VALUES ('" & txt_rg.Text & "', '" _
+                          & txt_nomecompleto.Text & "', '" & txt_usuario.Text & "', '" & txt_senha.Text & "', '" _
+                          & txt_cpf.Text & "', '" & txt_dtnasc.Text & "', '" & txt_foneres.Text & "', '" _
+                          & txt_cel.Text & "', '" & txt_email.Text & "', '" & cmb_perguntas.Text & "', '" _
+                          & txt_resposta.Text & "')"
                     db.Execute(sql)
                     MetroMessageBox.Show(Me, "Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
@@ -50,5 +47,9 @@ Public Class frm_cadastrocli
                 MetroMessageBox.Show(Me, "Senhas não coincidem", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             End If
         End If
+    End Sub
+
+    Private Sub frm_cadastrocli_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        frm_menuinicial.Show()
     End Sub
 End Class

@@ -49,10 +49,12 @@ Public Class frm_recuperaradm
 
                 Dim inputUsuario As New metroInput
                 Dim text As String = ""
-                inputUsuario.ShowDialog(text, False)
+                inputUsuario.ShowDialog(text, "Digite o código de confirmação:", False, False, Nothing)
 
                 If text = codigoConfirmacao Then
                     MetroMessageBox.Show(Me, "Sua senha é: " & rs.Fields("senha").Value, "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                ElseIf text = "" Then
+                    Exit Sub
                 Else
                     MetroMessageBox.Show(Me, "O código informado está incorreto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
