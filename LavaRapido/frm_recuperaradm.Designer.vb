@@ -30,9 +30,10 @@ Partial Class frm_recuperaradm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(429, 295)
+        Me.Button1.Location = New System.Drawing.Point(286, 192)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 77)
+        Me.Button1.Size = New System.Drawing.Size(133, 50)
         Me.Button1.TabIndex = 38
         Me.Button1.Text = "Confirmar"
         Me.Button1.UseSelectable = True
@@ -43,17 +44,17 @@ Partial Class frm_recuperaradm
         '
         '
         Me.txt_email.CustomButton.Image = Nothing
-        Me.txt_email.CustomButton.Location = New System.Drawing.Point(1347, 2)
-        Me.txt_email.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_email.CustomButton.Location = New System.Drawing.Point(401, 1)
         Me.txt_email.CustomButton.Name = ""
-        Me.txt_email.CustomButton.Size = New System.Drawing.Size(44, 45)
+        Me.txt_email.CustomButton.Size = New System.Drawing.Size(10, 10)
         Me.txt_email.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_email.CustomButton.TabIndex = 1
         Me.txt_email.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_email.CustomButton.UseSelectable = True
         Me.txt_email.CustomButton.Visible = False
         Me.txt_email.Lines = New String(-1) {}
-        Me.txt_email.Location = New System.Drawing.Point(90, 203)
+        Me.txt_email.Location = New System.Drawing.Point(60, 132)
+        Me.txt_email.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_email.MaxLength = 32767
         Me.txt_email.Name = "txt_email"
         Me.txt_email.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -62,7 +63,7 @@ Partial Class frm_recuperaradm
         Me.txt_email.SelectionLength = 0
         Me.txt_email.SelectionStart = 0
         Me.txt_email.ShortcutsEnabled = True
-        Me.txt_email.Size = New System.Drawing.Size(928, 31)
+        Me.txt_email.Size = New System.Drawing.Size(619, 20)
         Me.txt_email.TabIndex = 33
         Me.txt_email.UseSelectable = True
         Me.txt_email.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -71,7 +72,8 @@ Partial Class frm_recuperaradm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(86, 162)
+        Me.Label2.Location = New System.Drawing.Point(57, 105)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 19)
         Me.Label2.TabIndex = 32
@@ -79,19 +81,18 @@ Partial Class frm_recuperaradm
         '
         'frm_recuperaradm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1088, 480)
+        Me.ClientSize = New System.Drawing.Size(725, 312)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txt_email)
         Me.Controls.Add(Me.Label2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frm_recuperaradm"
-        Me.Padding = New System.Windows.Forms.Padding(30, 92, 30, 31)
         Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.Style = MetroFramework.MetroColorStyle.Orange
         Me.Text = "Recuperar senha de Administrador ou Funcionário"
         Me.ResumeLayout(False)

@@ -25,13 +25,13 @@ Public Class frm_manutencao
 
         If dgv_dados.CurrentRow.Cells(3).Selected Then
 
-            sql = "SELECT * FROM tb_adm WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+            sql = "SELECT * FROM " & tabela & " WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
             rs = db.Execute(sql)
 
             If rs.Fields("tipo_conta").Value = "Administrador" Then
                 MetroMessageBox.Show(Me, "Você não pode editar o Administrador.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                sql = "UPDATE tb_adm SET status_conta='ativa', n_tentativas=3 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+                sql = "UPDATE " & tabela & " SET status_conta='ativa', n_tentativas=3 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_ativas.Checked = True
                 MetroMessageBox.Show(Me, "Usuário ativado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -39,13 +39,13 @@ Public Class frm_manutencao
 
         ElseIf dgv_dados.CurrentRow.Cells(4).Selected Then
 
-            sql = "SELECT * FROM tb_adm WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+            sql = "SELECT * FROM " & tabela & " WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
             rs = db.Execute(sql)
 
             If rs.Fields("tipo_conta").Value = "Administrador" Then
                 MetroMessageBox.Show(Me, "Você não pode editar o Administrador.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                sql = "UPDATE tb_adm SET status_conta='bloqueada', n_tentativas=0 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+                sql = "UPDATE " & tabela & " SET status_conta='bloqueada', n_tentativas=0 WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
                 db.Execute(sql)
                 rd_bloqueadas.Checked = True
                 MetroMessageBox.Show(Me, "Usuário bloqueado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -53,7 +53,7 @@ Public Class frm_manutencao
 
         ElseIf dgv_dados.CurrentRow.Cells(5).Selected Then
 
-            sql = "SELECT * FROM tb_adm WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
+            sql = "SELECT * FROM " & tabela & " WHERE usuario='" & dgv_dados.CurrentRow.Cells(1).Value & "'"
             rs = db.Execute(sql)
 
             If rs.Fields("tipo_conta").Value = "Administrador" Then
@@ -87,7 +87,7 @@ Public Class frm_manutencao
             If situacao = "tudo" Then
                 With dgv_dados
                     .Rows.Clear()
-                    sql = "SELECT * FROM tb_adm WHERE " & cmb_selecione.Text & " LIKE '" & txt_parametros.Text & "%' ORDER BY usuario"
+                    sql = "SELECT * FROM " & tabela & " WHERE " & cmb_selecione.Text & " LIKE '" & txt_parametros.Text & "%' ORDER BY usuario"
                     rs = db.Execute(sql)
                     cont = 1
                     Do While rs.EOF = False
@@ -99,7 +99,7 @@ Public Class frm_manutencao
             Else
                 With dgv_dados
                     .Rows.Clear()
-                    sql = "SELECT * FROM tb_adm WHERE " & cmb_selecione.Text & " LIKE '" & txt_parametros.Text & "%' AND status_conta='" & situacao & "' ORDER BY usuario"
+                    sql = "SELECT * FROM " & tabela & " WHERE " & cmb_selecione.Text & " LIKE '" & txt_parametros.Text & "%' AND status_conta='" & situacao & "' ORDER BY usuario"
                     rs = db.Execute(sql)
                     cont = 1
                     Do While rs.EOF = False
@@ -111,5 +111,9 @@ Public Class frm_manutencao
             End If
         Else
         End If
+    End Sub
+
+    Private Sub frm_manutencao_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        ultimoForm.Show()
     End Sub
 End Class

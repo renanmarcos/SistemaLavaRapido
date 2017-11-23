@@ -1,8 +1,9 @@
 ﻿Module modulo_principal
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
-    Public sql, tipo_conta, usuario, rg As String
-    Public conexao = Application.StartupPath & "\maindb.mdb"
+    Public sql, tipo_conta, usuario, rg, tabela As String
+    Public ultimoForm As MetroFramework.Forms.MetroForm
+    Public conexao = Application.StartupPath & "\banco\maindb.mdb"
 
     Sub conecta_banco()
         Try
@@ -17,7 +18,7 @@
         With frm_manutencao.dgv_dados
             Dim cont As Integer
             .Rows.Clear()
-            sql = "SELECT * FROM tb_adm WHERE status_conta='ativa' ORDER BY usuario"
+            sql = "SELECT * FROM " & tabela & " WHERE status_conta='ativa' ORDER BY usuario"
             rs = db.Execute(sql)
             cont = 1
             Do While rs.EOF = False

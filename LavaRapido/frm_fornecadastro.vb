@@ -34,4 +34,8 @@ Public Class frm_fornecadastro
     Private Sub frm_fornecadastro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conecta_banco()
     End Sub
+
+    Private Sub frm_fornecadastro_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        frm_fornecedor.Show()
+    End Sub
 End Class

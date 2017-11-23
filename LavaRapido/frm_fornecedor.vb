@@ -23,6 +23,7 @@
         End With
     End Sub
 
+
     Private Sub txt_parametros_Click(sender As Object, e As EventArgs) Handles txt_parametros.Click
     End Sub
 
@@ -78,5 +79,9 @@
                 End If
             End If
         End With
+    End Sub
+
+    Private Sub frm_fornecedor_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        frm_menu.Show()
     End Sub
 End Class

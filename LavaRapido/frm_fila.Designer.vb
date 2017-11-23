@@ -73,7 +73,8 @@ Partial Class frm_fila
         'cb_hoje
         '
         Me.cb_hoje.AutoSize = True
-        Me.cb_hoje.Location = New System.Drawing.Point(680, 74)
+        Me.cb_hoje.Location = New System.Drawing.Point(453, 48)
+        Me.cb_hoje.Margin = New System.Windows.Forms.Padding(2)
         Me.cb_hoje.Name = "cb_hoje"
         Me.cb_hoje.Size = New System.Drawing.Size(137, 15)
         Me.cb_hoje.Style = MetroFramework.MetroColorStyle.Teal
@@ -84,18 +85,18 @@ Partial Class frm_fila
         '
         'dtp_selecionarDia
         '
-        Me.dtp_selecionarDia.Location = New System.Drawing.Point(142, 60)
-        Me.dtp_selecionarDia.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.dtp_selecionarDia.Location = New System.Drawing.Point(95, 39)
+        Me.dtp_selecionarDia.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtp_selecionarDia.MinimumSize = New System.Drawing.Size(0, 29)
         Me.dtp_selecionarDia.Name = "dtp_selecionarDia"
-        Me.dtp_selecionarDia.Size = New System.Drawing.Size(492, 29)
+        Me.dtp_selecionarDia.Size = New System.Drawing.Size(329, 29)
         Me.dtp_selecionarDia.Style = MetroFramework.MetroColorStyle.Teal
         Me.dtp_selecionarDia.TabIndex = 10
         '
         'rd_todos
         '
         Me.rd_todos.AutoSize = True
-        Me.rd_todos.Location = New System.Drawing.Point(934, 40)
-        Me.rd_todos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.rd_todos.Location = New System.Drawing.Point(623, 26)
         Me.rd_todos.Name = "rd_todos"
         Me.rd_todos.Size = New System.Drawing.Size(55, 15)
         Me.rd_todos.Style = MetroFramework.MetroColorStyle.Teal
@@ -108,8 +109,7 @@ Partial Class frm_fila
         'rd_concluidos
         '
         Me.rd_concluidos.AutoSize = True
-        Me.rd_concluidos.Location = New System.Drawing.Point(934, 75)
-        Me.rd_concluidos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.rd_concluidos.Location = New System.Drawing.Point(623, 49)
         Me.rd_concluidos.Name = "rd_concluidos"
         Me.rd_concluidos.Size = New System.Drawing.Size(83, 15)
         Me.rd_concluidos.Style = MetroFramework.MetroColorStyle.Teal
@@ -122,8 +122,7 @@ Partial Class frm_fila
         'rd_emfila
         '
         Me.rd_emfila.AutoSize = True
-        Me.rd_emfila.Location = New System.Drawing.Point(934, 111)
-        Me.rd_emfila.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.rd_emfila.Location = New System.Drawing.Point(623, 72)
         Me.rd_emfila.Name = "rd_emfila"
         Me.rd_emfila.Size = New System.Drawing.Size(61, 15)
         Me.rd_emfila.Style = MetroFramework.MetroColorStyle.Teal
@@ -163,8 +162,7 @@ Partial Class frm_fila
         Me.dgv_fila.EnableHeadersVisualStyles = False
         Me.dgv_fila.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgv_fila.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgv_fila.Location = New System.Drawing.Point(-9, 189)
-        Me.dgv_fila.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgv_fila.Location = New System.Drawing.Point(-6, 123)
         Me.dgv_fila.Name = "dgv_fila"
         Me.dgv_fila.ReadOnly = True
         Me.dgv_fila.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -178,7 +176,7 @@ Partial Class frm_fila
         Me.dgv_fila.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgv_fila.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgv_fila.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_fila.Size = New System.Drawing.Size(1430, 500)
+        Me.dgv_fila.Size = New System.Drawing.Size(953, 325)
         Me.dgv_fila.Style = MetroFramework.MetroColorStyle.Teal
         Me.dgv_fila.TabIndex = 15
         Me.dgv_fila.UseStyleColors = True
@@ -253,11 +251,10 @@ Partial Class frm_fila
         '
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
-        Me.MetroTabControl1.Location = New System.Drawing.Point(4, 97)
-        Me.MetroTabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MetroTabControl1.Location = New System.Drawing.Point(3, 63)
         Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 0
-        Me.MetroTabControl1.Size = New System.Drawing.Size(1400, 728)
+        Me.MetroTabControl1.SelectedIndex = 1
+        Me.MetroTabControl1.Size = New System.Drawing.Size(933, 473)
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Teal
         Me.MetroTabControl1.TabIndex = 9
         Me.MetroTabControl1.UseSelectable = True
@@ -276,44 +273,40 @@ Partial Class frm_fila
         Me.MetroTabPage1.Controls.Add(Me.txt_carro)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
         Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.HorizontalScrollbarSize = 15
+        Me.MetroTabPage1.HorizontalScrollbarSize = 10
         Me.MetroTabPage1.Location = New System.Drawing.Point(4, 38)
-        Me.MetroTabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MetroTabPage1.Name = "MetroTabPage1"
-        Me.MetroTabPage1.Size = New System.Drawing.Size(1392, 686)
+        Me.MetroTabPage1.Size = New System.Drawing.Size(925, 431)
         Me.MetroTabPage1.TabIndex = 0
         Me.MetroTabPage1.Text = "Agendar horário"
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
         Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.VerticalScrollbarSize = 15
+        Me.MetroTabPage1.VerticalScrollbarSize = 10
         '
         'btn_agendar
         '
-        Me.btn_agendar.Location = New System.Drawing.Point(987, 451)
-        Me.btn_agendar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_agendar.Location = New System.Drawing.Point(658, 293)
         Me.btn_agendar.Name = "btn_agendar"
-        Me.btn_agendar.Size = New System.Drawing.Size(256, 91)
+        Me.btn_agendar.Size = New System.Drawing.Size(171, 59)
         Me.btn_agendar.TabIndex = 8
         Me.btn_agendar.Text = "Agendar horário"
         Me.btn_agendar.UseSelectable = True
         '
         'txt_placa
         '
-        Me.txt_placa.Location = New System.Drawing.Point(1164, 91)
-        Me.txt_placa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_placa.Location = New System.Drawing.Point(776, 59)
         Me.txt_placa.Mask = "???-0000"
         Me.txt_placa.Name = "txt_placa"
-        Me.txt_placa.Size = New System.Drawing.Size(78, 26)
+        Me.txt_placa.Size = New System.Drawing.Size(53, 20)
         Me.txt_placa.TabIndex = 1
         '
         'txt_hora
         '
         Me.txt_hora.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txt_hora.Location = New System.Drawing.Point(218, 297)
-        Me.txt_hora.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_hora.Location = New System.Drawing.Point(145, 193)
         Me.txt_hora.Mask = "00:00"
         Me.txt_hora.Name = "txt_hora"
-        Me.txt_hora.Size = New System.Drawing.Size(55, 26)
+        Me.txt_hora.Size = New System.Drawing.Size(38, 20)
         Me.txt_hora.TabIndex = 3
         '
         'gb_servico
@@ -327,11 +320,9 @@ Partial Class frm_fila
         Me.gb_servico.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.gb_servico.Font = New System.Drawing.Font("Arial Narrow", 13.0!)
         Me.gb_servico.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.gb_servico.Location = New System.Drawing.Point(854, 178)
-        Me.gb_servico.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.gb_servico.Location = New System.Drawing.Point(569, 116)
         Me.gb_servico.Name = "gb_servico"
-        Me.gb_servico.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.gb_servico.Size = New System.Drawing.Size(390, 242)
+        Me.gb_servico.Size = New System.Drawing.Size(260, 157)
         Me.gb_servico.TabIndex = 3
         Me.gb_servico.TabStop = False
         Me.gb_servico.Text = "Selecione o serviço desejado:"
@@ -339,8 +330,7 @@ Partial Class frm_fila
         'cb_completa
         '
         Me.cb_completa.AutoSize = True
-        Me.cb_completa.Location = New System.Drawing.Point(54, 88)
-        Me.cb_completa.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cb_completa.Location = New System.Drawing.Point(36, 57)
         Me.cb_completa.Name = "cb_completa"
         Me.cb_completa.Size = New System.Drawing.Size(177, 15)
         Me.cb_completa.Style = MetroFramework.MetroColorStyle.Teal
@@ -351,8 +341,7 @@ Partial Class frm_fila
         'cb_enceramento
         '
         Me.cb_enceramento.AutoSize = True
-        Me.cb_enceramento.Location = New System.Drawing.Point(54, 120)
-        Me.cb_enceramento.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cb_enceramento.Location = New System.Drawing.Point(36, 78)
         Me.cb_enceramento.Name = "cb_enceramento"
         Me.cb_enceramento.Size = New System.Drawing.Size(144, 15)
         Me.cb_enceramento.Style = MetroFramework.MetroColorStyle.Teal
@@ -363,8 +352,7 @@ Partial Class frm_fila
         'lbl_total
         '
         Me.lbl_total.AutoSize = True
-        Me.lbl_total.Location = New System.Drawing.Point(54, 194)
-        Me.lbl_total.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_total.Location = New System.Drawing.Point(36, 126)
         Me.lbl_total.Name = "lbl_total"
         Me.lbl_total.Size = New System.Drawing.Size(82, 19)
         Me.lbl_total.TabIndex = 16
@@ -373,8 +361,7 @@ Partial Class frm_fila
         'cb_basica
         '
         Me.cb_basica.AutoSize = True
-        Me.cb_basica.Location = New System.Drawing.Point(54, 55)
-        Me.cb_basica.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cb_basica.Location = New System.Drawing.Point(36, 36)
         Me.cb_basica.Name = "cb_basica"
         Me.cb_basica.Size = New System.Drawing.Size(158, 15)
         Me.cb_basica.Style = MetroFramework.MetroColorStyle.Teal
@@ -385,8 +372,7 @@ Partial Class frm_fila
         'cb_polimento
         '
         Me.cb_polimento.AutoSize = True
-        Me.cb_polimento.Location = New System.Drawing.Point(54, 152)
-        Me.cb_polimento.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cb_polimento.Location = New System.Drawing.Point(36, 99)
         Me.cb_polimento.Name = "cb_polimento"
         Me.cb_polimento.Size = New System.Drawing.Size(129, 15)
         Me.cb_polimento.Style = MetroFramework.MetroColorStyle.Teal
@@ -397,8 +383,7 @@ Partial Class frm_fila
         'MetroLabel4
         '
         Me.MetroLabel4.AutoSize = True
-        Me.MetroLabel4.Location = New System.Drawing.Point(140, 297)
-        Me.MetroLabel4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MetroLabel4.Location = New System.Drawing.Point(93, 193)
         Me.MetroLabel4.Name = "MetroLabel4"
         Me.MetroLabel4.Size = New System.Drawing.Size(41, 19)
         Me.MetroLabel4.TabIndex = 9
@@ -407,8 +392,7 @@ Partial Class frm_fila
         'MetroLabel3
         '
         Me.MetroLabel3.AutoSize = True
-        Me.MetroLabel3.Location = New System.Drawing.Point(140, 225)
-        Me.MetroLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MetroLabel3.Location = New System.Drawing.Point(93, 146)
         Me.MetroLabel3.Name = "MetroLabel3"
         Me.MetroLabel3.Size = New System.Drawing.Size(31, 19)
         Me.MetroLabel3.TabIndex = 8
@@ -416,19 +400,17 @@ Partial Class frm_fila
         '
         'dtp_dia
         '
-        Me.dtp_dia.Location = New System.Drawing.Point(218, 215)
-        Me.dtp_dia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtp_dia.Location = New System.Drawing.Point(145, 140)
         Me.dtp_dia.MinimumSize = New System.Drawing.Size(0, 29)
         Me.dtp_dia.Name = "dtp_dia"
-        Me.dtp_dia.Size = New System.Drawing.Size(430, 29)
+        Me.dtp_dia.Size = New System.Drawing.Size(288, 29)
         Me.dtp_dia.Style = MetroFramework.MetroColorStyle.Teal
         Me.dtp_dia.TabIndex = 2
         '
         'MetroLabel2
         '
         Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(1090, 91)
-        Me.MetroLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MetroLabel2.Location = New System.Drawing.Point(727, 59)
         Me.MetroLabel2.Name = "MetroLabel2"
         Me.MetroLabel2.Size = New System.Drawing.Size(43, 19)
         Me.MetroLabel2.TabIndex = 5
@@ -437,8 +419,7 @@ Partial Class frm_fila
         'MetroLabel1
         '
         Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.Location = New System.Drawing.Point(140, 92)
-        Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MetroLabel1.Location = New System.Drawing.Point(93, 60)
         Me.MetroLabel1.Name = "MetroLabel1"
         Me.MetroLabel1.Size = New System.Drawing.Size(46, 19)
         Me.MetroLabel1.TabIndex = 3
@@ -450,18 +431,16 @@ Partial Class frm_fila
         '
         '
         Me.txt_carro.CustomButton.Image = Nothing
-        Me.txt_carro.CustomButton.Location = New System.Drawing.Point(1052, 2)
-        Me.txt_carro.CustomButton.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_carro.CustomButton.Location = New System.Drawing.Point(468, 1)
         Me.txt_carro.CustomButton.Name = ""
-        Me.txt_carro.CustomButton.Size = New System.Drawing.Size(50, 51)
+        Me.txt_carro.CustomButton.Size = New System.Drawing.Size(21, 21)
         Me.txt_carro.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_carro.CustomButton.TabIndex = 1
         Me.txt_carro.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_carro.CustomButton.UseSelectable = True
         Me.txt_carro.CustomButton.Visible = False
         Me.txt_carro.Lines = New String(-1) {}
-        Me.txt_carro.Location = New System.Drawing.Point(218, 92)
-        Me.txt_carro.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_carro.Location = New System.Drawing.Point(145, 60)
         Me.txt_carro.MaxLength = 80
         Me.txt_carro.Name = "txt_carro"
         Me.txt_carro.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -470,7 +449,7 @@ Partial Class frm_fila
         Me.txt_carro.SelectionLength = 0
         Me.txt_carro.SelectionStart = 0
         Me.txt_carro.ShortcutsEnabled = True
-        Me.txt_carro.Size = New System.Drawing.Size(735, 35)
+        Me.txt_carro.Size = New System.Drawing.Size(490, 23)
         Me.txt_carro.Style = MetroFramework.MetroColorStyle.Teal
         Me.txt_carro.TabIndex = 0
         Me.txt_carro.UseSelectable = True
@@ -487,16 +466,15 @@ Partial Class frm_fila
         Me.MetroTabPage2.Controls.Add(Me.rd_todos)
         Me.MetroTabPage2.HorizontalScrollbarBarColor = True
         Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.HorizontalScrollbarSize = 15
+        Me.MetroTabPage2.HorizontalScrollbarSize = 10
         Me.MetroTabPage2.Location = New System.Drawing.Point(4, 38)
-        Me.MetroTabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MetroTabPage2.Name = "MetroTabPage2"
-        Me.MetroTabPage2.Size = New System.Drawing.Size(1392, 686)
+        Me.MetroTabPage2.Size = New System.Drawing.Size(925, 431)
         Me.MetroTabPage2.TabIndex = 1
         Me.MetroTabPage2.Text = "Visualizar fila"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
         Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage2.VerticalScrollbarSize = 15
+        Me.MetroTabPage2.VerticalScrollbarSize = 10
         '
         'MetroToolTip1
         '
@@ -506,15 +484,16 @@ Partial Class frm_fila
         '
         'frm_fila
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1438, 829)
+        Me.ClientSize = New System.Drawing.Size(924, 512)
         Me.Controls.Add(Me.MetroTabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "frm_fila"
-        Me.Padding = New System.Windows.Forms.Padding(30, 92, 30, 31)
         Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.Style = MetroFramework.MetroColorStyle.Teal
         Me.Text = "Fila de carros"
         CType(Me.dgv_fila, System.ComponentModel.ISupportInitialize).EndInit()

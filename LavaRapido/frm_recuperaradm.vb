@@ -66,4 +66,8 @@ Public Class frm_recuperaradm
         conecta_banco()
         txt_email.Text = usuario
     End Sub
+
+    Private Sub frm_recuperaradm_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        ultimoForm.Show()
+    End Sub
 End Class

@@ -41,10 +41,10 @@ Partial Class frm_login
         '
         Me.link_esqueceu.AutoSize = True
         Me.link_esqueceu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.link_esqueceu.Location = New System.Drawing.Point(657, 420)
-        Me.link_esqueceu.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.link_esqueceu.Location = New System.Drawing.Point(438, 273)
+        Me.link_esqueceu.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.link_esqueceu.Name = "link_esqueceu"
-        Me.link_esqueceu.Size = New System.Drawing.Size(231, 35)
+        Me.link_esqueceu.Size = New System.Drawing.Size(154, 23)
         Me.link_esqueceu.TabIndex = 16
         Me.link_esqueceu.Text = "Esqueceu sua senha?"
         Me.link_esqueceu.UseSelectable = True
@@ -52,7 +52,8 @@ Partial Class frm_login
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(63, 365)
+        Me.Label4.Location = New System.Drawing.Point(42, 237)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(99, 19)
         Me.Label4.TabIndex = 15
@@ -66,16 +67,18 @@ Partial Class frm_login
         Me.cmb_nivel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.cmb_nivel.FormattingEnabled = True
         Me.cmb_nivel.ItemHeight = 23
-        Me.cmb_nivel.Location = New System.Drawing.Point(75, 397)
+        Me.cmb_nivel.Location = New System.Drawing.Point(50, 258)
+        Me.cmb_nivel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmb_nivel.Name = "cmb_nivel"
-        Me.cmb_nivel.Size = New System.Drawing.Size(476, 29)
+        Me.cmb_nivel.Size = New System.Drawing.Size(319, 29)
         Me.cmb_nivel.TabIndex = 14
         Me.cmb_nivel.UseSelectable = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(63, 243)
+        Me.Label3.Location = New System.Drawing.Point(42, 158)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 19)
         Me.Label3.TabIndex = 12
@@ -84,7 +87,8 @@ Partial Class frm_login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(63, 128)
+        Me.Label2.Location = New System.Drawing.Point(42, 83)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(114, 19)
         Me.Label2.TabIndex = 10
@@ -94,10 +98,11 @@ Partial Class frm_login
         '
         Me.txt_senha.Font = New System.Drawing.Font("Segoe UI", 16.11189!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_senha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txt_senha.Location = New System.Drawing.Point(75, 280)
+        Me.txt_senha.Location = New System.Drawing.Point(50, 182)
+        Me.txt_senha.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_senha.Name = "txt_senha"
         Me.txt_senha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt_senha.Size = New System.Drawing.Size(476, 50)
+        Me.txt_senha.Size = New System.Drawing.Size(319, 36)
         Me.txt_senha.TabIndex = 2
         '
         'txt_usuario
@@ -106,10 +111,9 @@ Partial Class frm_login
         '
         '
         Me.txt_usuario.CustomButton.Image = Nothing
-        Me.txt_usuario.CustomButton.Location = New System.Drawing.Point(430, 1)
-        Me.txt_usuario.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_usuario.CustomButton.Location = New System.Drawing.Point(193, 1)
         Me.txt_usuario.CustomButton.Name = ""
-        Me.txt_usuario.CustomButton.Size = New System.Drawing.Size(47, 47)
+        Me.txt_usuario.CustomButton.Size = New System.Drawing.Size(18, 18)
         Me.txt_usuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_usuario.CustomButton.TabIndex = 1
         Me.txt_usuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -118,7 +122,8 @@ Partial Class frm_login
         Me.txt_usuario.FontSize = MetroFramework.MetroTextBoxSize.Tall
         Me.txt_usuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txt_usuario.Lines = New String(-1) {}
-        Me.txt_usuario.Location = New System.Drawing.Point(76, 163)
+        Me.txt_usuario.Location = New System.Drawing.Point(51, 106)
+        Me.txt_usuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_usuario.MaxLength = 32767
         Me.txt_usuario.Name = "txt_usuario"
         Me.txt_usuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -127,7 +132,7 @@ Partial Class frm_login
         Me.txt_usuario.SelectionLength = 0
         Me.txt_usuario.SelectionStart = 0
         Me.txt_usuario.ShortcutsEnabled = True
-        Me.txt_usuario.Size = New System.Drawing.Size(478, 49)
+        Me.txt_usuario.Size = New System.Drawing.Size(319, 32)
         Me.txt_usuario.TabIndex = 17
         Me.txt_usuario.UseSelectable = True
         Me.txt_usuario.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -137,9 +142,10 @@ Partial Class frm_login
         '
         Me.btn_entrar.BackColor = System.Drawing.SystemColors.Control
         Me.btn_entrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_entrar.Location = New System.Drawing.Point(661, 328)
+        Me.btn_entrar.Location = New System.Drawing.Point(441, 213)
+        Me.btn_entrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_entrar.Name = "btn_entrar"
-        Me.btn_entrar.Size = New System.Drawing.Size(234, 78)
+        Me.btn_entrar.Size = New System.Drawing.Size(156, 51)
         Me.btn_entrar.TabIndex = 18
         Me.btn_entrar.Text = "Entrar"
         Me.btn_entrar.UseSelectable = True
@@ -148,9 +154,10 @@ Partial Class frm_login
         '
         Me.MetroLabel1.AutoSize = True
         Me.MetroLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Small
         Me.MetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold
-        Me.MetroLabel1.Location = New System.Drawing.Point(0, 9)
+        Me.MetroLabel1.Location = New System.Drawing.Point(0, 6)
+        Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
         Me.MetroLabel1.Size = New System.Drawing.Size(207, 25)
         Me.MetroLabel1.TabIndex = 2
@@ -162,9 +169,11 @@ Partial Class frm_login
         Me.GroupBox1.Controls.Add(Me.lbl_tentativas)
         Me.GroupBox1.Controls.Add(Me.MetroLabel1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.11189!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(661, 163)
+        Me.GroupBox1.Location = New System.Drawing.Point(441, 106)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(234, 146)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(156, 95)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         '
@@ -172,18 +181,19 @@ Partial Class frm_login
         '
         Me.lbl_tentativas.AutoSize = True
         Me.lbl_tentativas.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.13986!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_tentativas.Location = New System.Drawing.Point(90, 65)
+        Me.lbl_tentativas.Location = New System.Drawing.Point(60, 42)
+        Me.lbl_tentativas.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_tentativas.Name = "lbl_tentativas"
-        Me.lbl_tentativas.Size = New System.Drawing.Size(44, 47)
+        Me.lbl_tentativas.Size = New System.Drawing.Size(30, 31)
         Me.lbl_tentativas.TabIndex = 20
         Me.lbl_tentativas.Text = "3"
         '
         'frm_login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1015, 541)
+        Me.ClientSize = New System.Drawing.Size(677, 352)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.link_esqueceu)
@@ -194,9 +204,9 @@ Partial Class frm_login
         Me.Controls.Add(Me.txt_usuario)
         Me.Controls.Add(Me.cmb_nivel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.Name = "frm_login"
-        Me.Padding = New System.Windows.Forms.Padding(30, 92, 30, 31)
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show

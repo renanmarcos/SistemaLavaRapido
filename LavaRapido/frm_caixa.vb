@@ -2,16 +2,13 @@
 
 Public Class frm_caixa
     Public contlista, cont, rg, caixa
-    Dim total, desconto, precofinal As Double
+    Public total, desconto, precofinal As Double
     Dim resp As String
-
-    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
-
-    End Sub
 
     Private Sub frm_caixa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         caixa = 0
         conecta_banco()
+
         With dgv_dados
             .Rows.Clear()
             sql = "select * from tb_cliente"
@@ -24,26 +21,30 @@ Public Class frm_caixa
                 rs.MoveNext()
             Loop
         End With
+<<<<<<< HEAD
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles lbl_precofinal.Click
+=======
+>>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
 
+        dgv_dados.Rows(0).Selected = True
     End Sub
 
     Private Sub dgv_dados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_dados.CellContentClick
         rg = dgv_dados.CurrentRow.Cells(0).Value.ToString
     End Sub
 
-    Private Sub txt_parametros_Click(sender As Object, e As EventArgs) Handles txt_parametros.Click
-
-    End Sub
-
     Private Sub btn_gerarm_Click(sender As Object, e As EventArgs) Handles btn_gerarm.Click
+        ultimoForm = Me
         frm_relatoriomensal.Show()
+        Hide()
     End Sub
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles btn_gerarg.Click
+        ultimoForm = Me
         frm_relatoriototal.Show()
+        Hide()
     End Sub
 
     Private Sub txt_parametros_TextChanged(sender As Object, e As EventArgs) Handles txt_parametros.TextChanged
@@ -61,10 +62,6 @@ Public Class frm_caixa
 
     End Sub
 
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If caixa = 1 Then
             resp = MetroMessageBox.Show(Me, "Você está certo disso", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -79,10 +76,6 @@ Public Class frm_caixa
         Else
             MetroMessageBox.Show(Me, "Caixa não foi iniciado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
-    End Sub
-
-    Private Sub DataGridView1_CellContentChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_caixa.CellValueChanged
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_inciarcaixa.Click
@@ -114,5 +107,9 @@ Public Class frm_caixa
         lbl_precofinal.Text = precofinal.ToString("c")
         caixa = 1
         TabControl1.SelectTab(1)
+    End Sub
+
+    Private Sub frm_caixa_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        ultimoForm.Show()
     End Sub
 End Class
