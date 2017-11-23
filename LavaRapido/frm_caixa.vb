@@ -21,12 +21,9 @@ Public Class frm_caixa
                 rs.MoveNext()
             Loop
         End With
-<<<<<<< HEAD
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles lbl_precofinal.Click
-=======
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
 
         dgv_dados.Rows(0).Selected = True
     End Sub

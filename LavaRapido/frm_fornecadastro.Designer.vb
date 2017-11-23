@@ -69,15 +69,11 @@ Partial Class frm_fornecadastro
         '
         '
         Me.txt_qtd.CustomButton.Image = Nothing
-<<<<<<< HEAD
-        Me.txt_qtd.CustomButton.Location = New System.Drawing.Point(125, 1)
-        Me.txt_qtd.CustomButton.Name = ""
-        Me.txt_qtd.CustomButton.Size = New System.Drawing.Size(18, 18)
-=======
+
         Me.txt_qtd.CustomButton.Location = New System.Drawing.Point(187, 2)
         Me.txt_qtd.CustomButton.Name = ""
         Me.txt_qtd.CustomButton.Size = New System.Drawing.Size(27, 27)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.txt_qtd.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_qtd.CustomButton.TabIndex = 1
         Me.txt_qtd.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -85,11 +81,9 @@ Partial Class frm_fornecadastro
         Me.txt_qtd.CustomButton.Visible = False
         Me.txt_qtd.Lines = New String(-1) {}
         Me.txt_qtd.Location = New System.Drawing.Point(24, 169)
-<<<<<<< HEAD
-        Me.txt_qtd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-=======
+
         Me.txt_qtd.Margin = New System.Windows.Forms.Padding(2)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.txt_qtd.MaxLength = 32767
         Me.txt_qtd.Name = "txt_qtd"
         Me.txt_qtd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -110,15 +104,11 @@ Partial Class frm_fornecadastro
         '
         '
         Me.txt_preco.CustomButton.Image = Nothing
-<<<<<<< HEAD
-        Me.txt_preco.CustomButton.Location = New System.Drawing.Point(125, 1)
-        Me.txt_preco.CustomButton.Name = ""
-        Me.txt_preco.CustomButton.Size = New System.Drawing.Size(18, 18)
-=======
+
         Me.txt_preco.CustomButton.Location = New System.Drawing.Point(187, 2)
         Me.txt_preco.CustomButton.Name = ""
         Me.txt_preco.CustomButton.Size = New System.Drawing.Size(27, 27)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.txt_preco.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_preco.CustomButton.TabIndex = 1
         Me.txt_preco.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -126,11 +116,9 @@ Partial Class frm_fornecadastro
         Me.txt_preco.CustomButton.Visible = False
         Me.txt_preco.Lines = New String(-1) {}
         Me.txt_preco.Location = New System.Drawing.Point(248, 169)
-<<<<<<< HEAD
-        Me.txt_preco.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-=======
+
         Me.txt_preco.Margin = New System.Windows.Forms.Padding(2)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.txt_preco.MaxLength = 32767
         Me.txt_preco.Name = "txt_preco"
         Me.txt_preco.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -170,15 +158,11 @@ Partial Class frm_fornecadastro
         '
         '
         Me.txt_nomef.CustomButton.Image = Nothing
-<<<<<<< HEAD
-        Me.txt_nomef.CustomButton.Location = New System.Drawing.Point(457, 1)
-        Me.txt_nomef.CustomButton.Name = ""
-        Me.txt_nomef.CustomButton.Size = New System.Drawing.Size(18, 18)
-=======
+
         Me.txt_nomef.CustomButton.Location = New System.Drawing.Point(685, 2)
         Me.txt_nomef.CustomButton.Name = ""
         Me.txt_nomef.CustomButton.Size = New System.Drawing.Size(27, 27)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.txt_nomef.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_nomef.CustomButton.TabIndex = 1
         Me.txt_nomef.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -186,11 +170,9 @@ Partial Class frm_fornecadastro
         Me.txt_nomef.CustomButton.Visible = False
         Me.txt_nomef.Lines = New String(-1) {}
         Me.txt_nomef.Location = New System.Drawing.Point(24, 39)
-<<<<<<< HEAD
-        Me.txt_nomef.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-=======
+
         Me.txt_nomef.Margin = New System.Windows.Forms.Padding(2)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.txt_nomef.MaxLength = 32767
         Me.txt_nomef.Name = "txt_nomef"
         Me.txt_nomef.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -220,11 +202,9 @@ Partial Class frm_fornecadastro
         Me.btn_Criar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_Criar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_Criar.Location = New System.Drawing.Point(606, 224)
-<<<<<<< HEAD
-        Me.btn_Criar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-=======
+
         Me.btn_Criar.Margin = New System.Windows.Forms.Padding(2)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.btn_Criar.Name = "btn_Criar"
         Me.btn_Criar.Size = New System.Drawing.Size(133, 50)
         Me.btn_Criar.TabIndex = 29
@@ -237,15 +217,11 @@ Partial Class frm_fornecadastro
         '
         '
         Me.txt_nomep.CustomButton.Image = Nothing
-<<<<<<< HEAD
-        Me.txt_nomep.CustomButton.Location = New System.Drawing.Point(457, 1)
-        Me.txt_nomep.CustomButton.Name = ""
-        Me.txt_nomep.CustomButton.Size = New System.Drawing.Size(18, 18)
-=======
+
         Me.txt_nomep.CustomButton.Location = New System.Drawing.Point(685, 2)
         Me.txt_nomep.CustomButton.Name = ""
         Me.txt_nomep.CustomButton.Size = New System.Drawing.Size(27, 27)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.txt_nomep.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_nomep.CustomButton.TabIndex = 1
         Me.txt_nomep.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -253,11 +229,9 @@ Partial Class frm_fornecadastro
         Me.txt_nomep.CustomButton.Visible = False
         Me.txt_nomep.Lines = New String(-1) {}
         Me.txt_nomep.Location = New System.Drawing.Point(24, 104)
-<<<<<<< HEAD
-        Me.txt_nomep.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-=======
+
         Me.txt_nomep.Margin = New System.Windows.Forms.Padding(2)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.txt_nomep.MaxLength = 32767
         Me.txt_nomep.Name = "txt_nomep"
         Me.txt_nomep.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -309,14 +283,12 @@ Partial Class frm_fornecadastro
         Me.ClientSize = New System.Drawing.Size(790, 361)
         Me.Controls.Add(Me.GroupBox2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-<<<<<<< HEAD
-        Me.Name = "frm_fornecadastro"
-=======
+
         Me.MaximizeBox = False
         Me.Name = "frm_fornecadastro"
         Me.Resizable = False
         Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.Text = "Fornecedor"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

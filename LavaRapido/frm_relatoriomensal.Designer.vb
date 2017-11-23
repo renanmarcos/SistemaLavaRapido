@@ -50,25 +50,18 @@ Partial Class frm_relatoriomensal
         '
         'ReportViewer1
         '
-<<<<<<< HEAD
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-=======
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         ReportDataSource1.Name = "DataSet1"
         ReportDataSource1.Value = Me.tb_caixaBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "LavaRapido.Report.rdlc"
-<<<<<<< HEAD
-        Me.ReportViewer1.Location = New System.Drawing.Point(20, 60)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(637, 431)
-=======
+
         Me.ReportViewer1.Location = New System.Drawing.Point(7, 100)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(650, 391)
->>>>>>> 9198d046a2b17fdbf26f99d723eb9c7b9c9816c6
+
         Me.ReportViewer1.TabIndex = 0
         '
         'tb_caixaTableAdapter

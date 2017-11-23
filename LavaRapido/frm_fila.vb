@@ -270,8 +270,8 @@ Public Class frm_fila
                                              "Só agendamos com 30 minutos de diferenças entre carros, pois é o tempo que levamos para lavar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
                     Else
-
-                        If txt_hora.Text < DateTime.Now.ToString("HH:mm") Then
+                        Dim Data_hoje As DateTime = DateTime.Now
+                        If txt_hora.Text < DateTime.Now.ToString("HH:mm") And dtp_dia.Value.Date = DateTime.Today Then
                             txt_hora.Text = DateTime.Now.ToShortTimeString
                         End If
 
@@ -319,7 +319,8 @@ Public Class frm_fila
     End Sub
 
     Private Sub txt_hora_LostFocus(sender As Object, e As EventArgs) Handles txt_hora.LostFocus
-        If txt_hora.Text < DateTime.Now.ToString("HH:mm") Then
+        Dim Data_hoje As DateTime = DateTime.Now
+        If txt_hora.Text < DateTime.Now.ToString("HH:mm") And dtp_dia.Value.Date = DateTime.Today Then
             txt_hora.Text = DateTime.Now.ToShortTimeString
         End If
     End Sub
