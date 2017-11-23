@@ -43,6 +43,7 @@ Partial Class frm_caixa
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button2 = New MetroFramework.Controls.MetroButton()
         Me.TabPage1 = New MetroFramework.Controls.MetroTabPage()
+        Me.btn_gerarg = New MetroFramework.Controls.MetroButton()
         Me.btn_gerarm = New MetroFramework.Controls.MetroButton()
         Me.btn_inciarcaixa = New MetroFramework.Controls.MetroButton()
         Me.txt_parametros = New MetroFramework.Controls.MetroTextBox()
@@ -51,7 +52,6 @@ Partial Class frm_caixa
         Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.usuario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1 = New MetroFramework.Controls.MetroTabControl()
-        Me.btn_gerarg = New MetroFramework.Controls.MetroButton()
         Me.TabPage2.SuspendLayout()
         CType(Me.dgv_caixa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -236,6 +236,15 @@ Partial Class frm_caixa
         Me.TabPage1.VerticalScrollbarHighlightOnWheel = False
         Me.TabPage1.VerticalScrollbarSize = 10
         '
+        'btn_gerarg
+        '
+        Me.btn_gerarg.Location = New System.Drawing.Point(491, 274)
+        Me.btn_gerarg.Name = "btn_gerarg"
+        Me.btn_gerarg.Size = New System.Drawing.Size(139, 31)
+        Me.btn_gerarg.TabIndex = 25
+        Me.btn_gerarg.Text = "Gerar Relatório Geral"
+        Me.btn_gerarg.UseSelectable = True
+        '
         'btn_gerarm
         '
         Me.btn_gerarm.Location = New System.Drawing.Point(491, 327)
@@ -369,15 +378,6 @@ Partial Class frm_caixa
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.UseSelectable = True
         '
-        'btn_gerarg
-        '
-        Me.btn_gerarg.Location = New System.Drawing.Point(491, 274)
-        Me.btn_gerarg.Name = "btn_gerarg"
-        Me.btn_gerarg.Size = New System.Drawing.Size(139, 31)
-        Me.btn_gerarg.TabIndex = 25
-        Me.btn_gerarg.Text = "Gerar Relatório Geral"
-        Me.btn_gerarg.UseSelectable = True
-        '
         'frm_caixa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -385,7 +385,10 @@ Partial Class frm_caixa
         Me.ClientSize = New System.Drawing.Size(722, 537)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "frm_caixa"
+        Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.Text = "Caixa"
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()

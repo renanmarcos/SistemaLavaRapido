@@ -53,16 +53,15 @@ Partial Class frm_fornecadastro
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.HorizontalScrollbarBarColor = True
         Me.GroupBox2.HorizontalScrollbarHighlightOnWheel = False
-        Me.GroupBox2.HorizontalScrollbarSize = 15
-        Me.GroupBox2.Location = New System.Drawing.Point(21, 97)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GroupBox2.HorizontalScrollbarSize = 10
+        Me.GroupBox2.Location = New System.Drawing.Point(14, 63)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1136, 442)
+        Me.GroupBox2.Size = New System.Drawing.Size(757, 287)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.Tag = ""
         Me.GroupBox2.VerticalScrollbarBarColor = True
         Me.GroupBox2.VerticalScrollbarHighlightOnWheel = False
-        Me.GroupBox2.VerticalScrollbarSize = 15
+        Me.GroupBox2.VerticalScrollbarSize = 10
         '
         'txt_qtd
         '
@@ -70,17 +69,17 @@ Partial Class frm_fornecadastro
         '
         '
         Me.txt_qtd.CustomButton.Image = Nothing
-        Me.txt_qtd.CustomButton.Location = New System.Drawing.Point(417, 2)
-        Me.txt_qtd.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_qtd.CustomButton.Location = New System.Drawing.Point(187, 2)
         Me.txt_qtd.CustomButton.Name = ""
-        Me.txt_qtd.CustomButton.Size = New System.Drawing.Size(70, 72)
+        Me.txt_qtd.CustomButton.Size = New System.Drawing.Size(27, 27)
         Me.txt_qtd.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_qtd.CustomButton.TabIndex = 1
         Me.txt_qtd.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_qtd.CustomButton.UseSelectable = True
         Me.txt_qtd.CustomButton.Visible = False
         Me.txt_qtd.Lines = New String(-1) {}
-        Me.txt_qtd.Location = New System.Drawing.Point(36, 260)
+        Me.txt_qtd.Location = New System.Drawing.Point(24, 169)
+        Me.txt_qtd.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_qtd.MaxLength = 32767
         Me.txt_qtd.Name = "txt_qtd"
         Me.txt_qtd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -89,7 +88,7 @@ Partial Class frm_fornecadastro
         Me.txt_qtd.SelectionLength = 0
         Me.txt_qtd.SelectionStart = 0
         Me.txt_qtd.ShortcutsEnabled = True
-        Me.txt_qtd.Size = New System.Drawing.Size(326, 49)
+        Me.txt_qtd.Size = New System.Drawing.Size(217, 32)
         Me.txt_qtd.TabIndex = 34
         Me.txt_qtd.UseSelectable = True
         Me.txt_qtd.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -101,17 +100,17 @@ Partial Class frm_fornecadastro
         '
         '
         Me.txt_preco.CustomButton.Image = Nothing
-        Me.txt_preco.CustomButton.Location = New System.Drawing.Point(417, 2)
-        Me.txt_preco.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_preco.CustomButton.Location = New System.Drawing.Point(187, 2)
         Me.txt_preco.CustomButton.Name = ""
-        Me.txt_preco.CustomButton.Size = New System.Drawing.Size(70, 72)
+        Me.txt_preco.CustomButton.Size = New System.Drawing.Size(27, 27)
         Me.txt_preco.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_preco.CustomButton.TabIndex = 1
         Me.txt_preco.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_preco.CustomButton.UseSelectable = True
         Me.txt_preco.CustomButton.Visible = False
         Me.txt_preco.Lines = New String(-1) {}
-        Me.txt_preco.Location = New System.Drawing.Point(372, 260)
+        Me.txt_preco.Location = New System.Drawing.Point(248, 169)
+        Me.txt_preco.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_preco.MaxLength = 32767
         Me.txt_preco.Name = "txt_preco"
         Me.txt_preco.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -120,7 +119,7 @@ Partial Class frm_fornecadastro
         Me.txt_preco.SelectionLength = 0
         Me.txt_preco.SelectionStart = 0
         Me.txt_preco.ShortcutsEnabled = True
-        Me.txt_preco.Size = New System.Drawing.Size(326, 49)
+        Me.txt_preco.Size = New System.Drawing.Size(217, 32)
         Me.txt_preco.TabIndex = 33
         Me.txt_preco.UseSelectable = True
         Me.txt_preco.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -128,18 +127,18 @@ Partial Class frm_fornecadastro
         '
         'dtp_dia
         '
-        Me.dtp_dia.Location = New System.Drawing.Point(722, 265)
-        Me.dtp_dia.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dtp_dia.Location = New System.Drawing.Point(481, 172)
         Me.dtp_dia.MinimumSize = New System.Drawing.Size(0, 29)
         Me.dtp_dia.Name = "dtp_dia"
-        Me.dtp_dia.Size = New System.Drawing.Size(385, 29)
+        Me.dtp_dia.Size = New System.Drawing.Size(258, 29)
         Me.dtp_dia.Style = MetroFramework.MetroColorStyle.Teal
         Me.dtp_dia.TabIndex = 32
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 12)
+        Me.Label2.Location = New System.Drawing.Point(19, 8)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(138, 19)
         Me.Label2.TabIndex = 14
@@ -151,17 +150,17 @@ Partial Class frm_fornecadastro
         '
         '
         Me.txt_nomef.CustomButton.Image = Nothing
-        Me.txt_nomef.CustomButton.Location = New System.Drawing.Point(1536, 2)
-        Me.txt_nomef.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_nomef.CustomButton.Location = New System.Drawing.Point(685, 2)
         Me.txt_nomef.CustomButton.Name = ""
-        Me.txt_nomef.CustomButton.Size = New System.Drawing.Size(70, 72)
+        Me.txt_nomef.CustomButton.Size = New System.Drawing.Size(27, 27)
         Me.txt_nomef.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_nomef.CustomButton.TabIndex = 1
         Me.txt_nomef.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_nomef.CustomButton.UseSelectable = True
         Me.txt_nomef.CustomButton.Visible = False
         Me.txt_nomef.Lines = New String(-1) {}
-        Me.txt_nomef.Location = New System.Drawing.Point(36, 60)
+        Me.txt_nomef.Location = New System.Drawing.Point(24, 39)
+        Me.txt_nomef.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_nomef.MaxLength = 32767
         Me.txt_nomef.Name = "txt_nomef"
         Me.txt_nomef.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -170,7 +169,7 @@ Partial Class frm_fornecadastro
         Me.txt_nomef.SelectionLength = 0
         Me.txt_nomef.SelectionStart = 0
         Me.txt_nomef.ShortcutsEnabled = True
-        Me.txt_nomef.Size = New System.Drawing.Size(1072, 49)
+        Me.txt_nomef.Size = New System.Drawing.Size(715, 32)
         Me.txt_nomef.TabIndex = 15
         Me.txt_nomef.UseSelectable = True
         Me.txt_nomef.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -179,7 +178,8 @@ Partial Class frm_fornecadastro
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(28, 112)
+        Me.Label3.Location = New System.Drawing.Point(19, 73)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(118, 19)
         Me.Label3.TabIndex = 16
@@ -189,9 +189,10 @@ Partial Class frm_fornecadastro
         '
         Me.btn_Criar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_Criar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_Criar.Location = New System.Drawing.Point(909, 345)
+        Me.btn_Criar.Location = New System.Drawing.Point(606, 224)
+        Me.btn_Criar.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_Criar.Name = "btn_Criar"
-        Me.btn_Criar.Size = New System.Drawing.Size(200, 77)
+        Me.btn_Criar.Size = New System.Drawing.Size(133, 50)
         Me.btn_Criar.TabIndex = 29
         Me.btn_Criar.Text = "Gravar"
         Me.btn_Criar.UseSelectable = True
@@ -202,17 +203,17 @@ Partial Class frm_fornecadastro
         '
         '
         Me.txt_nomep.CustomButton.Image = Nothing
-        Me.txt_nomep.CustomButton.Location = New System.Drawing.Point(1536, 2)
-        Me.txt_nomep.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_nomep.CustomButton.Location = New System.Drawing.Point(685, 2)
         Me.txt_nomep.CustomButton.Name = ""
-        Me.txt_nomep.CustomButton.Size = New System.Drawing.Size(70, 72)
+        Me.txt_nomep.CustomButton.Size = New System.Drawing.Size(27, 27)
         Me.txt_nomep.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_nomep.CustomButton.TabIndex = 1
         Me.txt_nomep.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_nomep.CustomButton.UseSelectable = True
         Me.txt_nomep.CustomButton.Visible = False
         Me.txt_nomep.Lines = New String(-1) {}
-        Me.txt_nomep.Location = New System.Drawing.Point(36, 160)
+        Me.txt_nomep.Location = New System.Drawing.Point(24, 104)
+        Me.txt_nomep.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_nomep.MaxLength = 32767
         Me.txt_nomep.Name = "txt_nomep"
         Me.txt_nomep.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -221,7 +222,7 @@ Partial Class frm_fornecadastro
         Me.txt_nomep.SelectionLength = 0
         Me.txt_nomep.SelectionStart = 0
         Me.txt_nomep.ShortcutsEnabled = True
-        Me.txt_nomep.Size = New System.Drawing.Size(1072, 49)
+        Me.txt_nomep.Size = New System.Drawing.Size(715, 32)
         Me.txt_nomep.TabIndex = 17
         Me.txt_nomep.UseSelectable = True
         Me.txt_nomep.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -230,7 +231,8 @@ Partial Class frm_fornecadastro
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 212)
+        Me.Label1.Location = New System.Drawing.Point(19, 138)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 19)
         Me.Label1.TabIndex = 18
@@ -239,7 +241,8 @@ Partial Class frm_fornecadastro
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(372, 212)
+        Me.Label4.Location = New System.Drawing.Point(248, 138)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 19)
         Me.Label4.TabIndex = 20
@@ -248,7 +251,8 @@ Partial Class frm_fornecadastro
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(712, 212)
+        Me.Label6.Location = New System.Drawing.Point(475, 138)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 19)
         Me.Label6.TabIndex = 25
@@ -256,14 +260,15 @@ Partial Class frm_fornecadastro
         '
         'frm_fornecadastro
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1185, 555)
+        Me.ClientSize = New System.Drawing.Size(790, 361)
         Me.Controls.Add(Me.GroupBox2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MaximizeBox = False
         Me.Name = "frm_fornecadastro"
-        Me.Padding = New System.Windows.Forms.Padding(30, 92, 30, 31)
+        Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.Text = "Fornecedor"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

@@ -24,9 +24,9 @@ Partial Class frm_relatoriomensal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tb_caixaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.maindbDataSet = New LavaRapido.maindbDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tb_caixaTableAdapter = New LavaRapido.maindbDataSetTableAdapters.tb_caixaTableAdapter()
         Me.MesToolStrip = New System.Windows.Forms.ToolStrip()
         Me.MesToolStripLabel = New System.Windows.Forms.ToolStripLabel()
@@ -36,6 +36,17 @@ Partial Class frm_relatoriomensal
         CType(Me.maindbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MesToolStrip.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'tb_caixaBindingSource
+        '
+        Me.tb_caixaBindingSource.DataMember = "tb_caixa"
+        Me.tb_caixaBindingSource.DataSource = Me.maindbDataSet
+        '
+        'maindbDataSet
+        '
+        Me.maindbDataSet.DataSetName = "maindbDataSet"
+        Me.maindbDataSet.EnforceConstraints = False
+        Me.maindbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -48,17 +59,6 @@ Partial Class frm_relatoriomensal
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(650, 391)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'tb_caixaBindingSource
-        '
-        Me.tb_caixaBindingSource.DataMember = "tb_caixa"
-        Me.tb_caixaBindingSource.DataSource = Me.maindbDataSet
-        '
-        'maindbDataSet
-        '
-        Me.maindbDataSet.DataSetName = "maindbDataSet"
-        Me.maindbDataSet.EnforceConstraints = False
-        Me.maindbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'tb_caixaTableAdapter
         '
@@ -98,7 +98,10 @@ Partial Class frm_relatoriomensal
         Me.ClientSize = New System.Drawing.Size(677, 511)
         Me.Controls.Add(Me.MesToolStrip)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.MaximizeBox = False
         Me.Name = "frm_relatoriomensal"
+        Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.Text = "Relatório Mensal"
         CType(Me.tb_caixaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.maindbDataSet, System.ComponentModel.ISupportInitialize).EndInit()

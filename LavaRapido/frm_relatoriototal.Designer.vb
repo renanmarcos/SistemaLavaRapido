@@ -24,13 +24,23 @@ Partial Class frm_relatoriototal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.maindbDataSet = New LavaRapido.maindbDataSet()
         Me.tb_caixaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.maindbDataSet = New LavaRapido.maindbDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tb_caixaTableAdapter = New LavaRapido.maindbDataSetTableAdapters.tb_caixaTableAdapter()
-        CType(Me.maindbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tb_caixaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.maindbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'tb_caixaBindingSource
+        '
+        Me.tb_caixaBindingSource.DataMember = "tb_caixa"
+        Me.tb_caixaBindingSource.DataSource = Me.maindbDataSet
+        '
+        'maindbDataSet
+        '
+        Me.maindbDataSet.DataSetName = "maindbDataSet"
+        Me.maindbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -44,16 +54,6 @@ Partial Class frm_relatoriototal
         Me.ReportViewer1.Size = New System.Drawing.Size(650, 391)
         Me.ReportViewer1.TabIndex = 1
         '
-        'maindbDataSet
-        '
-        Me.maindbDataSet.DataSetName = "maindbDataSet"
-        Me.maindbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'tb_caixaBindingSource
-        '
-        Me.tb_caixaBindingSource.DataMember = "tb_caixa"
-        Me.tb_caixaBindingSource.DataSource = Me.maindbDataSet
-        '
         'tb_caixaTableAdapter
         '
         Me.tb_caixaTableAdapter.ClearBeforeFill = True
@@ -64,10 +64,13 @@ Partial Class frm_relatoriototal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(656, 465)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.MaximizeBox = False
         Me.Name = "frm_relatoriototal"
+        Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.Text = "Relatório Geral"
-        CType(Me.maindbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tb_caixaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.maindbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

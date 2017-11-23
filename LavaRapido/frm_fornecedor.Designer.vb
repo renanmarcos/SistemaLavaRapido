@@ -29,25 +29,24 @@ Partial Class frm_fornecedor
         Me.btn_Adicionar = New MetroFramework.Controls.MetroButton()
         Me.lbl_parametro = New MetroFramework.Controls.MetroLabel()
         Me.txt_parametros = New MetroFramework.Controls.MetroTextBox()
-        Me.Column8 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgv_fornecedor = New MetroFramework.Controls.MetroGrid()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.cmb_selecao = New MetroFramework.Controls.MetroComboBox()
         CType(Me.dgv_fornecedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_Adicionar
         '
-        Me.btn_Adicionar.Location = New System.Drawing.Point(681, 151)
-        Me.btn_Adicionar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_Adicionar.Location = New System.Drawing.Point(454, 98)
         Me.btn_Adicionar.Name = "btn_Adicionar"
-        Me.btn_Adicionar.Size = New System.Drawing.Size(230, 35)
+        Me.btn_Adicionar.Size = New System.Drawing.Size(153, 23)
         Me.btn_Adicionar.TabIndex = 27
         Me.btn_Adicionar.Text = "Adicionar novo Registro"
         Me.btn_Adicionar.UseSelectable = True
@@ -55,7 +54,8 @@ Partial Class frm_fornecedor
         'lbl_parametro
         '
         Me.lbl_parametro.AutoSize = True
-        Me.lbl_parametro.Location = New System.Drawing.Point(40, 102)
+        Me.lbl_parametro.Location = New System.Drawing.Point(27, 66)
+        Me.lbl_parametro.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_parametro.Name = "lbl_parametro"
         Me.lbl_parametro.Size = New System.Drawing.Size(181, 19)
         Me.lbl_parametro.TabIndex = 21
@@ -67,17 +67,17 @@ Partial Class frm_fornecedor
         '
         '
         Me.txt_parametros.CustomButton.Image = Nothing
-        Me.txt_parametros.CustomButton.Location = New System.Drawing.Point(537, 2)
-        Me.txt_parametros.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_parametros.CustomButton.Location = New System.Drawing.Point(241, 2)
         Me.txt_parametros.CustomButton.Name = ""
-        Me.txt_parametros.CustomButton.Size = New System.Drawing.Size(44, 45)
+        Me.txt_parametros.CustomButton.Size = New System.Drawing.Size(15, 15)
         Me.txt_parametros.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txt_parametros.CustomButton.TabIndex = 1
         Me.txt_parametros.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txt_parametros.CustomButton.UseSelectable = True
         Me.txt_parametros.CustomButton.Visible = False
         Me.txt_parametros.Lines = New String(-1) {}
-        Me.txt_parametros.Location = New System.Drawing.Point(45, 151)
+        Me.txt_parametros.Location = New System.Drawing.Point(30, 98)
+        Me.txt_parametros.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_parametros.MaxLength = 32767
         Me.txt_parametros.Name = "txt_parametros"
         Me.txt_parametros.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -86,67 +86,11 @@ Partial Class frm_fornecedor
         Me.txt_parametros.SelectionLength = 0
         Me.txt_parametros.SelectionStart = 0
         Me.txt_parametros.ShortcutsEnabled = True
-        Me.txt_parametros.Size = New System.Drawing.Size(388, 31)
+        Me.txt_parametros.Size = New System.Drawing.Size(259, 20)
         Me.txt_parametros.TabIndex = 22
         Me.txt_parametros.UseSelectable = True
         Me.txt_parametros.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txt_parametros.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Excluir"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 80
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Editar"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 80
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Data"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 80
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Preço"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Width = 80
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Quantidade"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 80
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Nome"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 80
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Fornecedor"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 80
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 50
         '
         'dgv_fornecedor
         '
@@ -177,8 +121,7 @@ Partial Class frm_fornecedor
         Me.dgv_fornecedor.EnableHeadersVisualStyles = False
         Me.dgv_fornecedor.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.dgv_fornecedor.GridColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgv_fornecedor.Location = New System.Drawing.Point(40, 206)
-        Me.dgv_fornecedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgv_fornecedor.Location = New System.Drawing.Point(27, 134)
         Me.dgv_fornecedor.Name = "dgv_fornecedor"
         Me.dgv_fornecedor.ReadOnly = True
         Me.dgv_fornecedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -192,33 +135,96 @@ Partial Class frm_fornecedor
         Me.dgv_fornecedor.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgv_fornecedor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgv_fornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgv_fornecedor.Size = New System.Drawing.Size(1060, 551)
+        Me.dgv_fornecedor.Size = New System.Drawing.Size(707, 358)
         Me.dgv_fornecedor.TabIndex = 26
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 50
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Fornecedor"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 80
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Nome"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 80
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Quantidade"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 80
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Preço"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 80
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Data"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 80
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Editar"
+        Me.Column7.Image = CType(resources.GetObject("Column7.Image"), System.Drawing.Image)
+        Me.Column7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 80
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Excluir"
+        Me.Column8.Image = CType(resources.GetObject("Column8.Image"), System.Drawing.Image)
+        Me.Column8.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 80
         '
         'cmb_selecao
         '
         Me.cmb_selecao.FormattingEnabled = True
         Me.cmb_selecao.ItemHeight = 23
-        Me.cmb_selecao.Location = New System.Drawing.Point(468, 142)
-        Me.cmb_selecao.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cmb_selecao.Location = New System.Drawing.Point(312, 92)
         Me.cmb_selecao.Name = "cmb_selecao"
-        Me.cmb_selecao.Size = New System.Drawing.Size(180, 29)
+        Me.cmb_selecao.Size = New System.Drawing.Size(121, 29)
         Me.cmb_selecao.TabIndex = 28
         Me.cmb_selecao.UseSelectable = True
         '
         'frm_fornecedor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1188, 826)
+        Me.ClientSize = New System.Drawing.Size(792, 512)
         Me.Controls.Add(Me.cmb_selecao)
         Me.Controls.Add(Me.btn_Adicionar)
         Me.Controls.Add(Me.dgv_fornecedor)
         Me.Controls.Add(Me.txt_parametros)
         Me.Controls.Add(Me.lbl_parametro)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.Name = "frm_fornecedor"
-        Me.Padding = New System.Windows.Forms.Padding(20, 92, 20, 20)
+        Me.Padding = New System.Windows.Forms.Padding(13, 60, 13, 13)
+        Me.Resizable = False
+        Me.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow
         Me.Text = "Fornecedores"
         CType(Me.dgv_fornecedor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -229,14 +235,14 @@ Partial Class frm_fornecedor
     Friend WithEvents btn_Adicionar As MetroFramework.Controls.MetroButton
     Friend WithEvents lbl_parametro As MetroFramework.Controls.MetroLabel
     Friend WithEvents txt_parametros As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents Column8 As DataGridViewImageColumn
-    Friend WithEvents Column7 As DataGridViewImageColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents dgv_fornecedor As MetroFramework.Controls.MetroGrid
     Friend WithEvents cmb_selecao As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewImageColumn
+    Friend WithEvents Column8 As DataGridViewImageColumn
 End Class

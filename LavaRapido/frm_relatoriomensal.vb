@@ -27,4 +27,8 @@
     Private Sub MesToolStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MesToolStrip.ItemClicked
 
     End Sub
+
+    Private Sub frm_relatoriomensal_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        ultimoForm.Show()
+    End Sub
 End Class

@@ -12,6 +12,7 @@ Public Class frm_login
         txt_usuario.Focus()
     End Sub
 
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click
         If txt_usuario.Text = Nothing Or txt_senha.Text = Nothing Then
             MetroMessageBox.Show(Me, "Você precisa digitar o usuário e senha!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
@@ -61,6 +62,9 @@ Public Class frm_login
                     If tipo_conta = rs.Fields("tipo_conta").Value Then
                         tipo_conta = rs.Fields("tipo_conta").Value
                         rg = rs.Fields("rg").Value
+                        txt_usuario.Clear()
+                        txt_senha.Clear()
+                        ultimoForm = Me
                         frm_menu.Show()
                         Hide()
                     Else
@@ -71,12 +75,14 @@ Public Class frm_login
 
                     If Not rs.Fields("tipo_conta").Value = "Administrador" Then
                         n_tentativas = n_tentativas - 1
-                        sql = "UPDATE " & banco & " SET n_tentativas =" & n_tentativas & ", status_conta='bloqueada' WHERE id_usuario = " & rs.Fields("id_usuario").Value & ""
+                        sql = "UPDATE " & banco & " SET n_tentativas =" & n_tentativas & " WHERE rg = '" & rs.Fields("rg").Value & "'"
                         db.Execute(sql)
                         lbl_tentativas.Text = n_tentativas
 
                         If n_tentativas = 0 Then
                             btn_entrar.Enabled = False
+                            sql = "UPDATE " & banco & " SET status_conta='bloqueada' WHERE rg = '" & rs.Fields("rg").Value & "'"
+                            db.Execute(sql)
                         End If
                     End If
                 End If
@@ -106,11 +112,15 @@ Public Class frm_login
 
     Private Sub link_esqueceu_Click(sender As Object, e As EventArgs) Handles link_esqueceu.Click
         usuario = txt_usuario.Text
+        ultimoForm = Me
         frm_recuperar.Show()
         Hide()
     End Sub
 
     Private Sub frm_login_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        txt_senha.Clear()
+        txt_usuario.Clear()
         frm_menuinicial.Show()
+        cmb_nivel.SelectedIndex = 0
     End Sub
 End Class

@@ -107,7 +107,42 @@ Public Class frm_fila
                     End If
                 End If
             ElseIf .Cells("btn_pagar").Selected Then
-                MsgBox("Pagando...")
+                rg = dgv_fila.CurrentRow.Cells(1).Value
+                frm_caixa.total = 0
+
+                With frm_caixa.dgv_caixa
+                    frm_caixa.contlista = 1
+                    .Rows.Clear()
+                    sql = "SELECT * FROM (tb_cliente INNER JOIN tb_fila ON tb_cliente.rg = tb_fila.rg) INNER JOIN tb_servicos ON tb_fila.id_servico = tb_servicos.id_servico WHERE tb_cliente.rg='" & rg & "'"
+                    rs = db.Execute(sql)
+                    Do While rs.EOF = False
+                        .Rows.Add(rs.Fields("nome_servico").Value, rs.Fields("preco_servico").Value, Nothing)
+                        rs.MoveNext()
+                        frm_caixa.contlista = frm_caixa.contlista + 1
+                    Loop
+                End With
+
+                For Each col As DataGridViewRow In frm_caixa.dgv_caixa.Rows
+                    frm_caixa.total = frm_caixa.total + col.Cells(1).Value
+                    frm_caixa.lbl_total.Text = frm_caixa.total.ToString("c")
+                Next
+
+                sql = "SELECT * from tb_cliente where rg ='" & rg & "'"
+                rs = db.Execute(sql)
+
+                If String.Compare(rs.Fields("bonus").ToString, "desconto") Then
+                    frm_caixa.desconto = (Integer.Parse(rs.Fields("qtd_idas").Value)) * 0.42
+                    frm_caixa.lbl_desconto.Text = frm_caixa.desconto.ToString("c")
+                End If
+
+                frm_caixa.precofinal = frm_caixa.total - frm_caixa.desconto
+                frm_caixa.lbl_precofinal.Text = frm_caixa.precofinal.ToString("c")
+                frm_caixa.caixa = 1
+
+                frm_caixa.TabControl1.SelectedTab = frm_caixa.TabPage2
+                ultimoForm = Me
+                frm_caixa.Show()
+                Hide()
             End If
         End With
     End Sub
@@ -196,83 +231,86 @@ Public Class frm_fila
         If txt_carro.Text = Nothing Or txt_placa.MaskCompleted = False Or total = 0 Or txt_hora.Text = Nothing Then
             MetroMessageBox.Show(Me, "Você precisa preencher todos os campos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            If tipo_conta = "Visitante" Then
-                Dim inputUsuario As New metroInput
-                Dim text As String = ""
-                inputUsuario.ShowDialog(text, "Digite o seu RG:", False, True, "00,000,000-0")
+            If dtp_dia.Value < DateTime.Today Then
+                MetroMessageBox.Show(Me, "Você não pode marcar um dia que seja anterior à hoje", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                dtp_dia.Value = DateTime.Today
+            ElseIf dtp_dia.Value.DayOfWeek = 0 Then
+                MetroMessageBox.Show(Me, "Trabalhamos apenas de Segunda à Sexta.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                dtp_dia.Value = dtp_dia.Value.AddDays(1)
+            ElseIf dtp_dia.Value.DayOfWeek = 6 Then
+                MetroMessageBox.Show(Me, "Trabalhamos apenas de Segunda à Sexta.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                dtp_dia.Value = dtp_dia.Value.AddDays(-1)
+            Else
+                If tipo_conta = "Visitante" Then
+                    Dim inputUsuario As New metroInput
+                    Dim text As String = ""
+                    inputUsuario.ShowDialog(text, "Digite o seu RG:", False, True, "00,000,000-0")
 
-                If text = "" Then
-                    Exit Sub
-                ElseIf text = "incompleto" Then
-                    MsgBox("incompleto")
-                    Exit Sub
-                Else
-                    MsgBox(text)
-                    rg = text
-                End If
-
-            End If
-
-            Try
-                Dim horarioInicio As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("08:00"))
-                Dim horarioAlmoco As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("12:00").AddMinutes(-30))
-                Dim horarioDepoisAlmoco As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("13:00"))
-                Dim horarioFinal As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("17:00").AddMinutes(-30))
-
-                If (((horarioInicio < 0) Or (horarioAlmoco > 0)) And ((horarioDepoisAlmoco < 0) Or (horarioFinal > 0))) Or (dtp_dia.Value.DayOfWeek = 6 Or dtp_dia.Value.DayOfWeek = 0) Then
-                    MetroMessageBox.Show(Me, "Você precisa digitar uma hora e dia válidos." & vbCrLf &
-                                         "Horário: Segunda à Sexta das 08:00 às 12:00 e das 13:00 às 17:00" & vbCrLf &
-                                         "Só agendamos com 30 minutos de diferenças entre carros, pois é o tempo que levamos para lavar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-                Else
-                    sql = "SELECT * FROM tb_fila WHERE dia=#" & dtp_dia.Value.ToShortDateString & "#" &
-                          "AND hora BETWEEN #" & txt_hora.Text & "# - #00:29# AND #" & txt_hora.Text & "# + #00:30#"
-                    rs = db.Execute(sql)
-
-                    If rs.EOF = False Then
-                        MetroMessageBox.Show(Me, "Esse horário já está sendo utilizado ou o intervalo entre carros excede 30 minutos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    If text = "" Then
+                        Exit Sub
+                    ElseIf text = "incompleto" Then
+                        MsgBox("incompleto")
+                        Exit Sub
                     Else
-                        sql = "INSERT INTO tb_fila (dia, hora, carro, placa, rg, status, valor_total)" &
-                           "VALUES(#" & dtp_dia.Value.ToShortDateString & "#, #" & txt_hora.Text & "#," &
-                            "'" & txt_carro.Text & "', '" & txt_placa.Text & "', '" & rg & "', 'em fila', " & total & ")"
-                        db.Execute(sql)
-
-                        Dim id As Integer
-
-                        sql = "SELECT MAX(id_servico) FROM tb_fila"
-                        rs = db.Execute(sql)
-                        id = rs.Fields(0).Value
-
-                        For Each C As Controls.MetroCheckBox In gb_servico.Controls.OfType(Of Controls.MetroCheckBox)()
-                            If C.Checked Then
-                                sql = "INSERT INTO tb_servicos VALUES(" & id & ", '" & C.Text.Split("-")(0) & "'," &
-                                    "" & Double.Parse(C.Text.Split("-")(1), NumberStyles.Currency) & ")"
-                                db.Execute(sql)
-                            End If
-                        Next
-
-                        MetroMessageBox.Show(Me, "Carro agendado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        gerar_dados(dtp_selecionarDia.Value.ToShortDateString, Nothing, True)
-
+                        MsgBox(text)
+                        rg = text
                     End If
+
                 End If
 
-            Catch ex As FormatException
-                MetroMessageBox.Show(Me, "Hora inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
-        End If
-    End Sub
+                Try
+                    Dim horarioInicio As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("08:00"))
+                    Dim horarioAlmoco As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("12:00").AddMinutes(-30))
+                    Dim horarioDepoisAlmoco As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("13:00"))
+                    Dim horarioFinal As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("18:30").AddMinutes(-30))
 
-    Private Sub dtp_dia_ValueChanged(sender As Object, e As EventArgs) Handles dtp_dia.ValueChanged
-        If dtp_dia.Value < DateTime.Today Then
-            MetroMessageBox.Show(Me, "Você não pode marcar um dia que seja anterior à hoje", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            dtp_dia.Value = DateTime.Today
-        ElseIf dtp_dia.Value.DayOfWeek = 0 Then
-            MetroMessageBox.Show(Me, "Trabalhamos apenas de Segunda à Sexta.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            dtp_dia.Value = dtp_dia.Value.AddDays(+1)
-        ElseIf dtp_dia.Value.DayOfWeek = 6 Then
-            MetroMessageBox.Show(Me, "Trabalhamos apenas de Segunda à Sexta.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            dtp_dia.Value = dtp_dia.Value.AddDays(-1)
+                    If (((horarioInicio < 0) Or (horarioAlmoco > 0)) And ((horarioDepoisAlmoco < 0) Or (horarioFinal > 0))) Or (dtp_dia.Value.DayOfWeek = 6 Or dtp_dia.Value.DayOfWeek = 0) Then
+                        MetroMessageBox.Show(Me, "Você precisa digitar uma hora e dia válidos." & vbCrLf &
+                                             "Horário: Segunda à Sexta das 08:00 às 12:00 e das 13:00 às 17:00" & vbCrLf &
+                                             "Só agendamos com 30 minutos de diferenças entre carros, pois é o tempo que levamos para lavar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                    Else
+
+                        If txt_hora.Text < DateTime.Now.ToString("HH:mm") Then
+                            txt_hora.Text = DateTime.Now.ToShortTimeString
+                        End If
+
+                        sql = "SELECT * FROM tb_fila WHERE dia=#" & dtp_dia.Value.ToShortDateString & "#" &
+                              "AND hora BETWEEN #" & txt_hora.Text & "# - #00:29# AND #" & txt_hora.Text & "# + #00:30#"
+                        rs = db.Execute(sql)
+
+                        If rs.EOF = False Then
+                            MetroMessageBox.Show(Me, "Esse horário já está sendo utilizado ou o intervalo entre carros excede 30 minutos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Else
+                            sql = "INSERT INTO tb_fila (dia, hora, carro, placa, rg, status, valor_total)" &
+                               "VALUES(#" & dtp_dia.Value.ToShortDateString & "#, #" & txt_hora.Text & "#," &
+                                "'" & txt_carro.Text & "', '" & txt_placa.Text & "', '" & rg & "', 'em fila', " & total & ")"
+                            db.Execute(sql)
+
+                            Dim id As Integer
+
+                            sql = "SELECT MAX(id_servico) FROM tb_fila"
+                            rs = db.Execute(sql)
+                            id = rs.Fields(0).Value
+
+                            For Each C As Controls.MetroCheckBox In gb_servico.Controls.OfType(Of Controls.MetroCheckBox)()
+                                If C.Checked Then
+                                    sql = "INSERT INTO tb_servicos VALUES(" & id & ", '" & C.Text.Split("-")(0) & "'," &
+                                        "" & Double.Parse(C.Text.Split("-")(1), NumberStyles.Currency) & ")"
+                                    db.Execute(sql)
+                                End If
+                            Next
+
+                            MetroMessageBox.Show(Me, "Carro agendado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            gerar_dados(dtp_selecionarDia.Value.ToShortDateString, Nothing, True)
+
+                        End If
+                    End If
+
+                Catch ex As FormatException
+                    MetroMessageBox.Show(Me, "Hora inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End If
         End If
     End Sub
 
@@ -282,8 +320,11 @@ Public Class frm_fila
 
     Private Sub txt_hora_LostFocus(sender As Object, e As EventArgs) Handles txt_hora.LostFocus
         If txt_hora.Text < DateTime.Now.ToString("HH:mm") Then
-            MetroMessageBox.Show(Me, "Você não pode marcar uma hora menor do que a hora atual", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txt_hora.Text = DateTime.Now.ToShortTimeString
         End If
+    End Sub
+
+    Private Sub frm_fila_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        ultimoForm.Show()
     End Sub
 End Class

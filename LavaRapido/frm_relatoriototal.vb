@@ -4,4 +4,8 @@
         Me.tb_caixaTableAdapter.Fill(Me.maindbDataSet.tb_caixa)
 
     End Sub
+
+    Private Sub frm_relatoriototal_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        ultimoForm.Show()
+    End Sub
 End Class
