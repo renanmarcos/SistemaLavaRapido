@@ -24,9 +24,9 @@ Partial Class frm_relatoriomensal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tb_caixaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.maindbDataSet = New LavaRapido.maindbDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tb_caixaTableAdapter = New LavaRapido.maindbDataSetTableAdapters.tb_caixaTableAdapter()
         Me.MesToolStrip = New System.Windows.Forms.ToolStrip()
         Me.MesToolStripLabel = New System.Windows.Forms.ToolStripLabel()
@@ -36,18 +36,6 @@ Partial Class frm_relatoriomensal
         CType(Me.maindbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MesToolStrip.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'ReportViewer1
-        '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.tb_caixaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "LavaRapido.Report.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(7, 100)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(650, 391)
-        Me.ReportViewer1.TabIndex = 0
         '
         'tb_caixaBindingSource
         '
@@ -59,6 +47,19 @@ Partial Class frm_relatoriomensal
         Me.maindbDataSet.DataSetName = "maindbDataSet"
         Me.maindbDataSet.EnforceConstraints = False
         Me.maindbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.tb_caixaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "LavaRapido.Report.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(20, 60)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(637, 431)
+        Me.ReportViewer1.TabIndex = 0
         '
         'tb_caixaTableAdapter
         '

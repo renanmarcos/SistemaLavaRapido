@@ -277,7 +277,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report.rdlc" />
-    <EmbeddedResource Include="ReportGeral.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="maindbDataSet.xsc">

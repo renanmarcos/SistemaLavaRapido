@@ -17,11 +17,13 @@ Public Class frm_caixa
             sql = "select * from tb_cliente"
             rs = db.Execute(sql)
             Do While rs.EOF = False
+                If rg = 0 Then
+                    rg = rs.Fields("rg").Value
+                End If
                 .Rows.Add(rs.Fields(0).Value, rs.Fields(2).Value, Nothing, Nothing)
                 rs.MoveNext()
             Loop
         End With
-        dgv_dados.Rows(0).Selected = True
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles lbl_precofinal.Click
@@ -111,5 +113,6 @@ Public Class frm_caixa
         precofinal = total - desconto
         lbl_precofinal.Text = precofinal.ToString("c")
         caixa = 1
+        TabControl1.SelectTab(1)
     End Sub
 End Class

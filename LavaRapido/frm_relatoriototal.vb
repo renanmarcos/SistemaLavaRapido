@@ -3,5 +3,6 @@
         'TODO: esta linha de código carrega dados na tabela 'maindbDataSet.tb_caixa'. Você pode movê-la ou removê-la conforme necessário.
         Me.tb_caixaTableAdapter.Fill(Me.maindbDataSet.tb_caixa)
 
+        Me.ReportViewer1.RefreshReport
     End Sub
 End Class

@@ -33,14 +33,14 @@
                             <TextRun>
                               <Value>RG</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -72,16 +72,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>data</Value>
+                              <Value>Data</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -115,14 +115,14 @@
                             <TextRun>
                               <Value>Hora </Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -156,14 +156,14 @@
                             <TextRun>
                               <Value>Preço Final</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Right</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -203,11 +203,14 @@
                               <Value>=Fields!rg.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>99.999.999-9</Format>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>id_caixa</rd:DefaultName>
@@ -236,11 +239,14 @@
                               <Value>=Fields!data.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>d</Format>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>preco_total</rd:DefaultName>
@@ -260,7 +266,6 @@
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="hora2">
-                      <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -273,7 +278,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>hora</rd:DefaultName>
@@ -302,11 +309,15 @@
                               <Value>=Fields!preco_total.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
+                                <Format>'R$'0.00;('R$'0.00)</Format>
                                 <Color>#333333</Color>
+                                <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>hora</rd:DefaultName>
@@ -349,7 +360,7 @@
         <Top>1.56104cm</Top>
         <Left>3.12208cm</Left>
         <Height>1.2cm</Height>
-        <Width>11.50283cm</Width>
+        <Width>11.50284cm</Width>
         <Style>
           <Border>
             <Style>Double</Style>
@@ -371,11 +382,83 @@
           <FontSize>12pt</FontSize>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox56">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!preco_total.Value)</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <Format>'R$'0.00;('R$'0.00)</Format>
+                  <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox56</rd:DefaultName>
+        <Top>3.48933cm</Top>
+        <Left>12.5218cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.37312cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox57">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total:</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <Format>'R$'0.00;('R$'0.00)</Format>
+                  <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox56</rd:DefaultName>
+        <Top>2.93743cm</Top>
+        <Left>12.5218cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.37312cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2.39967in</Height>
+    <Height>4.40754in</Height>
     <Style />
   </Body>
-  <Width>9.19109in</Width>
+  <Width>10.69109in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
