@@ -334,9 +334,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
-    <Content Include="maindb.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\Images\" />

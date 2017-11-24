@@ -262,7 +262,7 @@ Public Class frm_fila
                     Dim horarioInicio As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("08:00"))
                     Dim horarioAlmoco As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("12:00").AddMinutes(-30))
                     Dim horarioDepoisAlmoco As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("13:00"))
-                    Dim horarioFinal As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("18:30").AddMinutes(-30))
+                    Dim horarioFinal As Integer = DateTime.Compare(DateTime.Parse(txt_hora.Text), DateTime.Parse("17:00").AddMinutes(-30))
 
                     If (((horarioInicio < 0) Or (horarioAlmoco > 0)) And ((horarioDepoisAlmoco < 0) Or (horarioFinal > 0))) Or (dtp_dia.Value.DayOfWeek = 6 Or dtp_dia.Value.DayOfWeek = 0) Then
                         MetroMessageBox.Show(Me, "Você precisa digitar uma hora e dia válidos." & vbCrLf &

@@ -92,7 +92,6 @@ Public Class frm_caixa
             total = total + col.Cells(1).Value
             lbl_total.Text = total.ToString("c")
         Next
-        MsgBox("Caixa criado com sucesso")
         sql = "SELECT * from tb_cliente where rg ='" & rg & "'"
         rs = db.Execute(sql)
         If String.Compare(rs.Fields("bonus").ToString, "desconto") Then
