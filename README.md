@@ -1,4 +1,4 @@
-﻿# Sistema de Lava Rápido criado em VB.NET
+﻿# Sistema de Lava Rápido criado em VB
 Trabalho proposto em aula para a disciplina de Sistemas de Informação na Fatec São Caetano do Sul.
 
 Criado por:
